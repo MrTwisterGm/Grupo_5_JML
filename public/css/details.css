@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+.barra-home{
+    display: flex;
+    
+    justify-content: space-between;
+    position: relative;
+    background-color: black;
+    color: white;
+}
+.barra{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    position: relative;
+    right: 40px;
+    margin-left: 60px;
+}
+.search{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+.ofertas{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    align-items: stretch;
+
+}
+.home-nav{
+    background-color: black;
+}
+
+h1 {
+    text-align: center;
+}
+
+.descripcion{
+    display: flex;
+}
+
+/* Footer */
+
+.footer-nav{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.terminos{
+    display: flex;
+    
+}
+.barras-footer{
+    display: flex;
+    justify-content: space-around;
+}
+.barra-teclados{
+    display: flex;
+    flex-direction: column;
+}
+.barra-mouses{
+    display: flex;
+    flex-direction: column;
+}
+.barra-auriculares{
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.barra-home{
+    background-color: black;
+    color: white;
+	display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 12px;
+}
+
+.barra{
+	list-style: none;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    color: grey;
+    
+}
+
+.barra li {
+	float: left;
+	padding: 6px;
+    border-right: 1px solid #551a8b;
+}
+
+.barra li:last-child {
+    border-right: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+.barra li a {
+	font-size: 24px;
+	text-transform: uppercase;
+}
+
+.logo{
+    position: relative;
+    right: 40px;
+}
+.search{
+	align-self: center;
+    display: inline-block;
+}
+
+.linksIzq {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    justify-content: space-around;
+}
+
+.col-6{
+    display: flex;
+}
+body{
+    background-color: grey;
+}
+.ofertas{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    
+
+}
+.oferts-images{
+    border-top: solid 1px #551a8b;
+    border-bottom: solid 1px #551a8b;
+}
+.footer-nav{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+
+ 
+}
+
+.terminos{
+    display: flex;
+    
+}
+.barras-footer{
+    display: flex;
+    justify-content: space-around;
+}
+.barra-teclados{
+    display: flex;
+    flex-direction: column;
+}
+.barra-mouses{
+    display: flex;
+    flex-direction: column;
+}
+.barra-auriculares{
+    display: flex;
+    flex-direction: column;
+}
