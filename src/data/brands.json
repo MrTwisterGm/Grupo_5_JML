@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "name": "Logitech"
+    },
+    {
+        "id": 2,
+        "name": "Hyperx"
+    },
+    {
+        "id": 3,
+        "name": "Asus"
+    },
+    {
+        "id": 4,
+        "name": "Astro"
+    },
+    {
+        "id": 5,
+        "name": "Redragon"
+    },
+    {
+        "id": 6,
+        "name": "Corsair"
+    },
+    {
+        "id": 7,
+        "name": "Turtlebeach"
+    }
+]

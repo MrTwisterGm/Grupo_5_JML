@@ -1,0 +1,608 @@
+[
+    {
+      "id": 1,
+      "name": "Auriculares Logitech G332 Leatherette",
+      "brand": 1,
+      "category": 1,
+      "colors": [
+        2,
+        4,
+        5
+      ],
+      "image": "G432_Gaming_7.1_USB_89da62c6-grn.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Auriculares Logitech G432 Gaming 7.1 USB",
+      "brand": 1,
+      "category": 1,
+      "colors": [
+        1,
+        5
+      ],
+      "image": "Auriculares_Logitech_G332_Leatherette_c4671f67-grn.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Auriculares Microfono Logitech G433 Gaming Black 7.1",
+      "brand": 1,
+      "category": 1,
+      "colors": [
+        
+        5
+      ],
+      "image": "Auriculares_Microfono_Logitech_G433_Gaming_Black_7.1_PC___PS4___Switch___XBOX_1ee6ebce-grn.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Auriculares Logitech PRO Gaming",
+      "brand": 1,
+      "category": 1,
+      "colors": [
+        
+        5
+      ],
+      "image": "Auriculares_Logitech_PRO_Gaming___Tarjeta_de_Sonido_USB_244d7f99-grn.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Auriculares Logitech G635 LightSync 7.1",
+      "brand": 1,
+      "category": 1,
+      "colors": [
+        1,
+        5
+      ],
+      "image": "Auriculares_Logitech_G635_LightSync_7.1_da750b51-grn.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Auriculares HyperX Cloud Stinger Core",
+      "brand": 2,
+      "category": 1,
+      "colors": [
+        1,
+        5
+      ],
+      "image": "Auriculares_HyperX_Cloud_Stinger_Core_PS4___Switch___XBOX_d334de1e-grn.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Auriculares HyperX Cloud Core 7.1",
+      "brand": 2,
+      "category": 1,
+      "colors": [
+        
+        5
+      ],
+      "image": "Auriculares_HyperX_Cloud_Core_7.1_e86a9bcf-grn.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Auriculares HyperX Cloud Alpha Gaming",
+      "brand": 2,
+      "category": 1,
+      "colors": [
+        2,
+        5
+      ],
+      "image": "Auriculares_HyperX_Cloud_Alpha_Gaming_Red_PC___PS4___Switch___XBOX_9f4d4fa9-grn.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Auriculares HyperX Cloud II Pro Gaming Gun Metal",
+      "brand": 2,
+      "category": 1,
+      "colors": [
+        6,
+        5
+      ],
+      "image": "Auriculares_HyperX_Cloud_II_Pro_Gaming_Gun_Metal_PC___PS4___Switch___XBOX_9c5b1951-grn.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Auriculares HyperX Flight S Black Wireless",
+      "brand": 2,
+      "category": 1,
+      "colors": [
+        
+        5
+      ],
+      "image": "Auriculares_HyperX_Flight_S_Black_Wireless__fc16b21b-grn.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Auriculares Inalambricos ASUS ROG STRIX Fusion 700 ACI FR 7.1 RGB",
+      "brand": 3,
+      "category": 1,
+      "colors": [
+        
+        5
+      ],
+      "image": "Auriculares_Inalambricos_ASUS_ROG_STRIX_Fusion_700_ACI_FR_7.1_RGB_e8913b73-grn.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Auriculares ASUS ROG DELTA CORE Gaming",
+      "brand": 3,
+      "category": 1,
+      "colors": [
+        6,
+        5
+      ],
+      "image": "Auriculares_ASUS_ROG_DELTA_CORE_Gaming_72121499-grn.jpg"
+    },
+    {
+      "id": 13,
+      "name": "ASUS ROG Strix GO 2.4 Electro Punk USB-C",
+      "brand": 3,
+      "category": 1,
+      "colors": [
+        
+        5
+      ],
+      "image": "Auriculares_Inalambricos_ASUS_ROG_Strix_GO_2.4_Electro_Punk_USB-C_PC_MAC_PS4_3530269e-grn.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Auriculares ASUS ROG Theta 7.1 USB-C Aura Sync RGB",
+      "brand": 3,
+      "category": 1,
+      "colors": [
+        
+        5
+      ],
+      "image": "Auriculares_ASUS_ROG_Theta_7.1_USB-C_Aura_Sync_RGB_6640fae2-grn.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Auriculares ASUS ROG Strix GO Core ",
+      "brand": 3,
+      "category": 1,
+      "colors": [
+        
+        5
+      ],
+      "image": "Auriculares_ASUS_ROG_Strix_GO_Core_PC_PS4_PS5_XBOX_09190092-grn.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Auriculares Logitech Astro A10 White Blue",
+      "brand": 4,
+      "category": 1,
+      "colors": [
+        
+        4
+      ],
+      "image": "Auriculares Logitech Astro A10 White Blue"
+    },
+    {
+      "id": 17,
+      "name": "Auriculares Logitech Astro A20",
+      "brand": 4,
+      "category": 1,
+      "colors": [
+        1,
+        4
+      ],
+      "image": "Auriculares_Logitech_Astro_A20_White_Blue_PS4_PC_MAC_b580335d-grn.jpg"
+    },
+    {
+      "id": 18,
+      "name": "Auriculares Logitech Astro A40 7.1 ",
+      "brand": 4,
+      "category": 1,
+      "colors": [
+        5
+      ],
+      "image": "Auriculares_Logitech_Astro_A40_7.1.jpg"
+    },
+    {
+      "id": 19,
+      "name": "Auriculares Inalambricos Logitech Astro A50 ",
+      "brand": 4,
+      "category": 1,
+      "colors": [
+        5
+      ],
+      "image": "Auriculares_Inalambricos_Logitech_Astro_A50.jpg"
+    },
+    {
+      "id": 20,
+      "name": "Auriculares Redragon H120 Ares ",
+      "brand": 5,
+      "category": 1,
+      "colors": [
+        5,2
+      ],
+      "image": "Auriculares_Redragon_H120_Ares_PC_978c684a-grn.jpg"
+    },
+    {
+      "id": 21,
+      "name": "Auriculares Redragon Pandora 2 H350 RGB USB 3.5mm",
+      "brand": 5,
+      "category": 1,
+      "colors": [
+        5
+      ],
+      "image": "Auriculares_Redragon_Pandora_2_H350_RGB_USB_3.5mm_62a4f20b-grn.jpg"
+    },
+    {
+      "id": 22,
+      "name": "Auriculares Redragon Scylla H901",
+      "brand": 5,
+      "category": 1,
+      "colors": [
+        5
+      ],
+      "image": "Auriculares_Redragon_Scylla_H901_PC___PS4___Switch___XBOX_d52354ae-grn.jpg"
+    },
+    {
+      "id": 23,
+      "name": "Auriculares Redragon Zeus H510-1 Surround 7.1 ",
+      "brand": 5,
+      "category": 1,
+      "colors": [
+        5,2
+      ],
+      "image": "Auriculares_Redragon_Zeus_H510-1_Surround_7.1_5b55219a-grn.jpg"
+    },
+    {
+      "id": 24,
+      "name": "Auriculares Redragon H320 Lamia RGB 7.1  ",
+      "brand": 5,
+      "category": 1,
+      "colors": [
+        5
+      ],
+      "image": "Auriculares_Redragon_H320_Lamia_RGB_7.1_49c998dc-grn.jpg"
+    },
+    {
+      "id": 25,
+      "name": "Auriculares Corsair HS35 ",
+      "brand": 6,
+      "category": 1,
+      "colors": [
+        1
+      ],
+      "image": "Auriculares_Corsair_HS35_Blue_34cc292a-grn.jpg"
+    },
+    {
+      "id": 26,
+      "name": "Auriculares Turtle Beach Recon 50P",
+      "brand": 7,
+      "category": 1,
+      "colors": [
+        1,5
+      ],
+      "image": "Recon-50P_3.png"
+    },
+    
+
+    {
+      "id": 27,
+      "name": "Mouse Logitech G300S Gaming 2500dpi | 9 botones",
+      "brand": 1,
+      "category": 3,
+      "colors": [
+        1,5
+      ],
+      "image": "Mouse_Logitech_G300S_Gaming_2500dpi___9_botones_4702c29a-grn.jpg"
+    },
+    {
+      "id": 28,
+      "name": "Mouse Logitech G PRO Hero Gaming 16000DPI RGB",
+      "brand": 1,
+      "category": 3,
+      "colors": [
+        5
+      ],
+      "image": "Mouse_Logitech_G_PRO_Hero_Gaming_16000DPI_RGB_2934063c-grn.jpg"
+    },
+    {
+      "id": 29,
+      "name": "Mouse Inalambrico Logitech G604 LIGHTSPEED Hero 16K",
+      "brand": 1,
+      "category": 3,
+      "colors": [
+        5
+      ],
+      "image": "Mouse_Inalambrico_Logitech_G604_LIGHTSPEED_Hero_16K_bf38b95a-grn.jpg"
+    },
+    {
+      "id": 30,
+      "name": "Mouse Logitech G903 Lightspeed Wireless Gaming 16.000dpi",
+      "brand": 1,
+      "category": 3,
+      "colors": [
+        5
+      ],
+      "image": "Mouse_Logitech_G903_Lightspeed_Wireless_Gaming_16.000dpi_86c5e07e-grn.jpg"
+    },
+    {
+      "id": 31,
+      "name": "Mouse HyperX Pulsefire CORE RGB",
+      "brand": 2,
+      "category": 3,
+      "colors": [
+        5
+      ],
+      "image": "Mouse_HyperX_Pulsefire_CORE_RGB_1179a734-grn.jpg"
+    },
+    {
+      "id": 32,
+      "name": "Mouse HyperX Pulsefire Surge RGB 16,000 DPI",
+      "brand": 2,
+      "category": 3,
+      "colors": [
+        5
+      ],
+      "image": "Mouse_HyperX_Pulsefire_Surge_RGB_16_000_DPI_12744384-grn.jpg"
+    },
+    {
+      "id": 33,
+      "name": "Mouse HyperX Pulsefire Dart Wireless RGB ",
+      "brand": 2,
+      "category": 3,
+      "colors": [
+        5
+      ],
+      "image": "Mouse_HyperX_Pulsefire_Dart_Wireless_RGB_76b921c3-grn.jpg"
+    },
+    {
+      "id": 34,
+      "name": "Mouse ASUS ROG STRIX Evolve RGB",
+      "brand": 3,
+      "category": 3,
+      "colors": [
+        5
+      ],
+      "image": "Mouse_ASUS_ROG_STRIX_Evolve_RGB_99814b07-grn.jpg"
+    },
+    {
+      "id": 35,
+      "name": "Mouse ASUS ROG Gladius II Wireless RGB",
+      "brand": 3,
+      "category": 3,
+      "colors": [
+        5
+      ],
+      "image": "Mouse_ASUS_ROG_Gladius_II_Wireless_RGB_161344dc-grn.jpg"
+    },
+    {
+      "id": 36,
+      "name": "Mouse ASUS ROG CHAKRAM Core USB RGB 16K DPI",
+      "brand": 3,
+      "category": 3,
+      "colors": [
+        5
+      ],
+      "image": "Mouse_ASUS_ROG_CHAKRAM_Core_USB_RGB_16K_DPI_ed665baf-grn.jpg"
+    },
+    {
+      "id": 37,
+      "name": "Mouse ASUS ROG STRIX Impact II Inalambrico 16K DPI",
+      "brand": 3,
+      "category": 3,
+      "colors": [
+        5
+      ],
+      "image": "Mouse_ASUS_ROG_STRIX_Impact_II_Inalambrico_16K_DPI_94ce89f1-grn.jpg"
+    },
+    {
+      "id": 38,
+      "name": "Mouse Redragon Cobra M711-FPS RGB 24.000 dpi ",
+      "brand": 5,
+      "category": 3,
+      "colors": [
+        5
+      ],
+      "image": "Mouse_Redragon_Cobra_M711-FPS_RGB_24.000_dpi_02b2b49d-grn.jpg"
+    },
+    {
+      "id": 39,
+      "name": "Mouse Redragon Gainer M610",
+      "brand": 5,
+      "category": 3,
+      "colors": [
+        5,2
+      ],
+      "image": "Mouse_Redragon_Gainer_M610_56ddacc6-grn.jpg"
+    },
+    {
+      "id": 40,
+      "name": "Mouse Redragon Centrophorus M601-RGB",
+      "brand": 5,
+      "category": 3,
+      "colors": [
+        5
+      ],
+      "image": "Mouse_Redragon_Centrophorus_M601-RGB_9805d92c-grn.jpg"
+    },
+    {
+      "id": 41,
+      "name": "Mouse Corsair DARK CORE RGB PRO Wireless Gaming Mouse",
+      "brand": 6,
+      "category": 3,
+      "colors": [
+        5
+      ],
+      "image": "DARK-CORE-RGB-PRO-01.png"
+    },
+
+
+    {
+      "id": 42,
+      "name": "Teclado Logitech Wireless K230",
+      "brand": 1,
+      "category": 2,
+      "colors": [
+        5
+      ],
+      "image": "Teclado_Logitech_Wireless_K230__b5b8f076-grn.jpg"
+    },
+    {
+      "id": 43,
+      "name": "Teclado Logitech G213 Prodigy RGB Gaming",
+      "brand": 1,
+      "category": 2,
+      "colors": [
+        5
+      ],
+      "image": "Teclado_Logitech_G213_Prodigy_RGB_Gaming_Espa__ol_ES_6e07b094-grn.jpg"
+    },
+    {
+      "id": 44,
+      "name": "Teclado Logitech G815 Mechanical RGB Lightsync",
+      "brand": 1,
+      "category": 2,
+      "colors": [
+        5
+      ],
+      "image": "Teclado_Logitech_G815_Mechanical_RGB_Lightsync_5ab9b8b1-grn.jpg"
+    },
+    {
+      "id": 45,
+      "name": "Teclado Mecanico Logitech G915 TKL RGB Lightspeed Inalambrico",
+      "brand": 1,
+      "category": 2,
+      "colors": [
+        5
+      ],
+      "image": "Teclado_Mecanico_Logitech_G915_TKL_RGB_Lightspeed_Inalambrico_065f0cec-grn.jpg"
+    },
+    {
+      "id": 46,
+      "name": "Teclado HyperX Alloy CORE RGB Gaming",
+      "brand": 2,
+      "category": 2,
+      "colors": [
+        5
+      ],
+      "image": "Teclado_HyperX_Alloy_CORE_RGB_Gaming_dd3acd58-grn.jpg"
+    },
+    {
+      "id": 47,
+      "name": "Teclado Mecanico HyperX Alloy FPS Pro Cherry MX Blue",
+      "brand": 2,
+      "category": 2,
+      "colors": [
+        5
+      ],
+      "image": "Teclado_Mecanico_HyperX_Alloy_FPS_Pro_Cherry_MX_Blue_5ea0203d-grn.jpg"
+    },
+    {
+      "id": 48,
+      "name": "Teclado Mecanico HyperX Alloy Origins Core Switch HyperX Blue",
+      "brand": 2,
+      "category": 2,
+      "colors": [
+        5
+      ],
+      "image": "Teclado_Mecanico_HyperX_Alloy_Origins_Core_Switch_HyperX_Blue_5dfa8f9a-grn.jpg"
+    },
+    {
+      "id": 49,
+      "name": "Teclado Mecanico HyperX Alloy Elite2 RGB HyperX Red",
+      "brand": 2,
+      "category": 2,
+      "colors": [
+        5
+      ],
+      "image": "Teclado_Mecanico_HyperX_Alloy_Elite2_RGB_HyperX_Red_72df56cb-grn.jpg"
+    },
+    {
+      "id": 50,
+      "name": "Teclado Mecanico ASUS TUF Gaming K3 US Red ",
+      "brand": 3,
+      "category": 2,
+      "colors": [
+        5
+      ],
+      "image": "Teclado_Mecanico_ASUS_TUF_Gaming_K3_US_Red_0a1144ab-grn.jpg"
+    },
+    {
+      "id": 51,
+      "name": "Teclado Mecanico ASUS TUF Gaming K7 US Optico Linear",
+      "brand": 3,
+      "category": 2,
+      "colors": [
+        5
+      ],
+      "image": "Teclado_Mecanico_ASUS_TUF_Gaming_K7_US_Optico_Linear_c10d288a-grn.jpg"
+    },
+    {
+      "id": 52,
+      "name": "Teclado Mecanico ASUS ROG STRIX Scope US TKL RGB Cherry MX Red",
+      "brand": 3,
+      "category": 2,
+      "colors": [
+        5
+      ],
+      "image": "Teclado_Mecanico_ASUS_ROG_STRIX_Scope_US_TKL_RGB_Cherry_MX_Red_ac577937-grn.jpg"
+    },
+    {
+      "id": 53,
+      "name": "Teclado Redragon Harpe K503-RGB",
+      "brand": 5,
+      "category": 2,
+      "colors": [
+        5
+      ],
+      "image": "Teclado_Redragon_Harpe_K503-RGB_Espa__ol_96243639-grn.jpg"
+    },
+    {
+      "id": 54,
+      "name": "Teclado Mecanico Redragon Dark Avenger K568RGB",
+      "brand": 5,
+      "category": 2,
+      "colors": [
+        5
+      ],
+      "image": "Teclado_Mecanico_Redragon_Dark_Avenger_K568RGB_99c1f75a-grn.jpg"
+    },
+    {
+      "id": 55,
+      "name": "Teclado Optico Redragon MAGIC-WAND PRO K587-PRO TKL",
+      "brand": 5,
+      "category": 2,
+      "colors": [
+        5
+      ],
+      "image": "Teclado_Optico_Redragon_MAGIC-WAND_PRO_K587-PRO_TKL_105dd2ae-grn.jpg"
+    },
+    {
+      "id": 56,
+      "name": "Teclado Corsair K63 Backlit Red Led Mecanico SP",
+      "brand": 6,
+      "category": 2,
+      "colors": [
+        5
+      ],
+      "image": "Teclado_Corsair_K63_Backlit_Red_Led_Mecanico_SP_3a8acaea-grn.jpg"
+    },
+    {
+      "id": 57,
+      "name": "Teclado Corsair K65 Rapidfire RGB Mechanical MX Speed",
+      "brand": 6,
+      "category": 2,
+      "colors": [
+        5
+      ],
+      "image": "Teclado_Corsair_K65_Rapidfire_RGB_Mechanical_MX_Speed_c9864a9c-grn.jpg"
+    },
+    {
+      "id": 58,
+      "name": "Teclado Corsair K95 Platinum RGB Led MX Speed",
+      "brand": 6,
+      "category": 2,
+      "colors": [
+        5
+      ],
+      "image": "Teclado_Corsair_K95_Platinum_RGB_Led_MX_Speed_f379296e-grn.jpg"
+    }
+
+
+
+
+  ]
