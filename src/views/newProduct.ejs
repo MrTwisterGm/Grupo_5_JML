@@ -1,0 +1,62 @@
+<html lang="en">
+
+    <%- include("./partials/head.ejs" %>
+
+<body>
+
+<%- include("./partials/header.ejs") %>
+
+    <div class="agregarProducto">
+        <form id="agregar2" class="agregarform" method="POST" action="" enctype="multipart/form-data">
+            <h1 class="h1">Agregar producto</h1>
+            <div class="agregarProducto">
+                <div class="errores">
+                    <ul id="errores">
+                    </ul>
+                </div>
+                <label class="label" for="nombre">Nombre:</label>
+                <br>
+                <input id="nombre" placeholder="Nombre del producto"  type="text" name="nombre"> 
+            </div>
+            <div class="agregarProductodesc">
+                <label class="label" for="descripcion">Descripción:</label>
+                <br>
+                <input id="descripcion" placeholder="Descripcion del producto" type="text" name="descripcion">
+            </div>
+            <div class="agregarProducto">
+                <label class="label"for="imagen">Imágen:</label>
+                <br>
+                <input id="imagen" placeholder="Imagen del producto" type="file" name="imagen" multiple>
+            </div>
+            <div class="agregarProducto">
+                <label class="label" for="color">Selecciona un color:</label>
+                <br>
+                <select name="color" type="Seleccionar un Color">
+    
+                </select>
+            </div>
+            
+            <div class="agregarProducto">
+                <label class="label" for="category">Selecciona una categoria:</label>
+                <br>
+                <select name="category" type="Seleccionar una Categoria">
+                    
+                </select>
+            </div>
+            <div class="agregarProducto">
+                <label class="label" for="precio">Precio:</label>
+                <br>
+                <input id="precio" placeholder="Precio del producto" type="number" name="precio">
+            </div>
+            <div class="IS">
+                <button type="submit">Guardar</button>
+                
+            </div>
+       
+        </form>
+    </div>
+
+    <%- include("./partials/footer.ejs") %>
+    
+</body>
+</html>

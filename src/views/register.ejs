@@ -1,21 +1,11 @@
 <html>
 
-<head>
-
-    <meta charset="UTF-8">
-    <title>Register</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <style>
-        body {
-            background-color: #303641;
-        }
-    </style>
-    
-</head>
+    <%- include("./partials/head.ejs"%>
 
 <body>
+
+    <%- include("./partials/header.ejs") %>
+
     <div id="container-register">
         <div id="title">
             <i class="material-icons lock">lock</i> Register
@@ -64,6 +54,9 @@
             <a href="#"><button id="register-link">Log In here</button></a>
         </div>
     </div>
+
+    <%- include("./partials/footer.ejs") %>
+
 </body>
 
 </html>
