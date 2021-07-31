@@ -1,0 +1,56 @@
+[
+        {
+            "id":   1,
+            "nombre": "Matias",
+            "apellido": "Bernardi",
+            "email": "matyasezeber@JML.com",
+            "contraseña": "password"
+        },
+        {
+            "id":   2,
+            "nombre": "Lucas",
+            "apellido": "Capra",
+            "email": "Lucascapra@JML.com",
+            "contraseña": "password"
+        },
+        {
+            "id":   3,
+            "nombre": "Juan Pablo",
+            "apellido": "Acosta",
+            "email": "Juanpacosta@JML.com",
+            "contraseña": "password"
+        },
+        
+        {
+            "id":   4,
+            "nombre": "Santiago",
+            "apellido": "Parejo",
+            "email": "ParejoSantiago@gmail.com",
+            "contraseña": "password"
+        },
+        {
+            "id":   5,
+            "nombre": "Gregorio",
+            "apellido": "Campo",
+            "email": "GregoCampo@gmail.com",
+            "contraseña": "password"
+        },
+        {
+            "id":   6,
+            "nombre": "Eduardo",
+            "apellido": "Cardona",
+            "email": "CardonaEdu@gmail.com",
+            "contraseña": "password"
+        },
+        {
+            "id":   7,
+            "nombre": "Luis",
+            "apellido": "Requena",
+            "email": "RequenaLuis@gmail.com",
+            "contraseña": "password"
+        }
+
+
+
+   
+]
