@@ -1,97 +1,87 @@
+/* HEADEAR */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor3{
+    display: flex;
+    /* width: 100%; */
+    border: 1px solid magenta;
+    box-sizing: content-box;
+}
+
+.logo{
+    width: 150px;
+    margin-left: 20px;
+}
+
+.caja-logo{
+    background-color: black;
+    
+}
+
+.login-nav{
+    display: flex;
+    align-items: center;
+
+}
+
+.login-nav li{
+    list-style: none;
+}
+
 .barra-home{
     background-color: black;
     color: white;
-	display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    padding: 12px;
+	/* width: 100%; */
+    display: flex;
+    border: 1px solid yellow;
 }
+
+
 
 .barra{
 	list-style: none;
     align-items: center;
     justify-content: center;
     display: flex;
-    padding: 0;
-    margin: 0;
+    /* border: 1px solid pink; */
 }
 
 .barra li {
-	float: left;
+	
 	padding: 6px;
     border-right: 1px solid #551a8b;
 }
 
-.barra li:last-child {
-    border-right: 0;
-}
-
-a {
-	text-decoration: none;
-}
 
 .barra li a {
-	font-size: 24px;
+	font-size: 20px;
 	text-transform: uppercase;
+
 }
 
-.logo{
-    position: relative;
-    right: 40px;
-}
 .search{
-	align-self: center;
-    display: inline-block;
+    width: 200px;
+    height: 25px;
 }
 
-.linksIzq {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: space-around;
-    justify-content: space-around;
-}
-
-.col-6{
-    display: flex;
-}
-body{
-    background-color: grey;
-}
-.ofertas{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-self: stretch;
-    align-items: stretch;
-
-}
-.footer-nav{
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content: space-around;
- 
-}
-
-.terminos{
-    display: flex;
+.fa-search{
     
+    height: 25px;
 }
-.barras-footer{
-    display: flex;
-    justify-content: space-around;
+
+.btn-search{
+    height: 25px;
+    width: 25px;
 }
-.barra-teclados{
-    display: flex;
-    flex-direction: column;
+
+
+
+@media (max-width: 375px) {
+
 }
-.barra-mouses{
-    display: flex;
-    flex-direction: column;
-}
-.barra-auriculares{
-    display: flex;
-    flex-direction: column;
-}
+
