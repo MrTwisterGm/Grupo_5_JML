@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const productRoutes = require('../src/routes/product');
 
 app.use(express.static(path.resolve(__dirname,"../public")));
 
@@ -8,13 +9,13 @@ app.set("view engine","ejs");
 
 app.set("views",path.join(__dirname,"views")); // LE INDICAMOS QUE COMO MOTOR DE VISTA UTILIZAREMOS EJS
 
-app.get("/",(req,res)=> res.render("home"));
+app.use("/", productRoutes);
 
 app.get("/container-register",(req,res)=> res.render("register"));
 
 app.get("/container-login",(req,res)=> res.render("login"));
 
-app.get("/products",(req,res)=> res.render("productDetail"));
+app.use("/products", productRoutes);
 
 app.get("/productCart",(req,res)=> res.render("productCart"));
 

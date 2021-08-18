@@ -8,25 +8,23 @@
 
 .contenedor3{
     display: flex;
-    /* width: 100%; */
-    border: 1px solid magenta;
     box-sizing: content-box;
 }
 
 .logo{
     width: 150px;
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 .caja-logo{
     background-color: black;
-    
+    width: 20%;
 }
 
 .login-nav{
     display: flex;
     align-items: center;
-
+    padding-left: 100px;
 }
 
 .login-nav li{
@@ -36,9 +34,9 @@
 .barra-home{
     background-color: black;
     color: white;
-	/* width: 100%; */
+	 width: 100%;
     display: flex;
-    border: 1px solid yellow;
+    
 }
 
 
@@ -48,13 +46,13 @@
     align-items: center;
     justify-content: center;
     display: flex;
-    /* border: 1px solid pink; */
+    padding-left: 200px;
 }
 
 .barra li {
 	
-	padding: 6px;
-    border-right: 1px solid #551a8b;
+	padding: 10px;
+    
 }
 
 
@@ -79,7 +77,89 @@
     width: 25px;
 }
 
+.fa-user:before {
+    
+    padding: 10px;
+}
 
+.fa-shopping-cart:before {
+    
+     padding: 10px;
+}
+
+
+/* MAIN */
+
+.imagen-1, .imagen-2, .imagen-3, .imagen-4 {   
+    width: 100%;
+    margin-top: -5px;
+}
+
+.img-flex {
+    display: flex;
+    width: 100%;
+}
+
+.imagen-5, .imagen-6{
+    width: 50%;
+    margin-top: -5px;
+}
+
+
+/* FOOTER */
+
+.contenedor4{
+    display: flex;
+    background-color: black;
+    color: white;
+    align-items: center;
+    height: 200px;
+    justify-content: space-between;
+}
+
+.checkbox {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.checkbox p {
+    margin-left: 5px;
+}
+
+.barra-terminos{
+    margin-left: 30px;
+}
+
+.barra-terminos-p {
+    margin-bottom: 10px;
+}
+
+.barras-footer {
+  display: flex;
+}
+
+.barras-footer a {
+    display: flex;
+}
+
+.barras-footer p{
+    font-size: 18px;
+}
+
+.barra-mouses, .barra-teclados ,.barra-auriculares {
+    margin-right: 50px;
+}
+
+.redes-sociales {
+    font-size: 20px;
+    margin-right: 40px;
+}
+
+.iconos-redes{
+    display: flex;
+    justify-content: space-between;
+}
 
 @media (max-width: 375px) {
 

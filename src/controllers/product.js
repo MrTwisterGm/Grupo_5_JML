@@ -2,7 +2,14 @@ const product = require('../models/product');
 const color = require('../models/color');
 const brand = require('../models/brand');
 module.exports = {
-    index:(req,res) => res.render("product/list",{list:product.allWithExtra()}),
+    index:(req,res) => {
+         res.render("home",{list:product.allWithExtra()})},
+
+
+
+
+
+
     show: (req,res) => res.render("product/detail",{product:product.one(req.params.id)}),
     create: (req,res) => res.render("product/create",{colors:color.all(),brands:brand.all()}),
     save: (req,res) => {
