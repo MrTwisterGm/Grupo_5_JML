@@ -3,15 +3,14 @@ const color = require('../models/color');
 const brand = require('../models/brand');
 module.exports = {
     index:(req,res) => {
-         res.render("home",{list:product.allWithExtra()})},
+        res.render("home",{list:product.allWithExtra()})},
 
+    home:(req,res) => {
+        res.render("home")
+    },    
 
-
-
-
-
-    show: (req,res) => res.render("product/detail",{product:product.one(req.params.id)}),
-    create: (req,res) => res.render("product/create",{colors:color.all(),brands:brand.all()}),
+    show: (req,res) => res.render("productDetail",{product:product.one(req.params.id)}),
+    create: (req,res) => res.render("newProduct",{colors:color.all(),brands:brand.all()}),
     save: (req,res) => {
         let result = product.new(req.body,req.file)
         return result == true ? res.redirect("/") : res.send("Error al cargar la informacion") 
@@ -24,5 +23,10 @@ module.exports = {
     delete: (req,res) => {
         let result = product.delete(req.params.id);
         return result == true ? res.redirect("/") : res.send("Error al cargar la informacion") 
-    }
+    },
+    cart: (req,res) => {
+        res.render("productCart")
+    },
+    //HAY QUE CREAR EL CONTROLADOR DE USUARIOS DESPUES
+    
 }
