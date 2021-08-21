@@ -22,6 +22,8 @@ router.get("/", product.home)
 
 router.get("/",product.index)
 
+router.get("/detail",product.show)
+
 router.get("/create",product.create)
 
 //router.get("/:id",product.show) NO TIENE VISTA
