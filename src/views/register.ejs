@@ -17,13 +17,21 @@
                     <i class="material-icons">email</i>
                 </div>
                 <input id="email" placeholder="Email" type="email" required class="validate" autocomplete="off">
+                <% if (locals.errors && errors.email) { %> 
+                   <div class="text-danger">
+                       <% errors.password.msg %> 
+                   </div>
+              <% } %> 
+
+
             </div>
+
 
             <div class="clearfix"></div>
 
             <div class="input">
                 <div class="input-addon">
-                    <i class="material-icons">face</i>
+                    <i class="material-icons">Nombre de Usuario</i>
                 </div>
                 <input id="username" placeholder="Username" type="text" required class="validate" autocomplete="off">
             </div>
@@ -32,7 +40,7 @@
 
             <div class="input">
                 <div class="input-addon">
-                    <i class="material-icons">vpn_key</i>
+                    <i class="material-icons">Contraseña</i>
                 </div>
                 <input id="password" placeholder="Password" type="password" required class="validate" autocomplete="off">
             </div>
