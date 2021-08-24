@@ -1,56 +1,10 @@
 [
-        {
-            "id":   1,
-            "nombre": "Matias",
-            "apellido": "Bernardi",
-            "email": "matyasezeber@JML.com",
-            "password": "password"
-        },
-        {
-            "id":   2,
-            "nombre": "Lucas",
-            "apellido": "Capra",
-            "email": "Lucascapra@JML.com",
-            "password": "password"
-        },
-        {
-            "id":   3,
-            "nombre": "Juan Pablo",
-            "apellido": "Acosta",
-            "email": "Juanpacosta@JML.com",
-            "password": "password"
-        },
-        
-        {
-            "id":   4,
-            "nombre": "Santiago",
-            "apellido": "Parejo",
-            "email": "ParejoSantiago@gmail.com",
-            "password": "password"
-        },
-        {
-            "id":   5,
-            "nombre": "Gregorio",
-            "apellido": "Campo",
-            "email": "GregoCampo@gmail.com",
-            "password": "password"
-        },
-        {
-            "id":   6,
-            "nombre": "Eduardo",
-            "apellido": "Cardona",
-            "email": "CardonaEdu@gmail.com",
-            "password": "password"
-        },
-        {
-            "id":   7,
-            "nombre": "Luis",
-            "apellido": "Requena",
-            "email": "RequenaLuis@gmail.com",
-            "password": "password"
-        }
-
-
-
-   
+ {
+  "password": "$2a$10$UmYHSsZ849Fo8bzwFc73k.5P.TZIhDxtufKYZUH/qvXGWYcYnZbrW"
+ },
+ {
+  "email": "juan@hotmail.com",
+  "username": "juan",
+  "password": "$2a$10$AGPP1IF8WOZdjrGfxypFNu6Es1Vvlq9X87P6K/FJkGCridQ8dIaTW"
+ }
 ]

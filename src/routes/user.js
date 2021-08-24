@@ -13,4 +13,6 @@ router.get("/register",user.register);
 
 router.post("/register",uploadFile.single("avatar"),user.processRegister);
 
+// routes.get("/profile", usersController.profile);
+
 module.exports = router
