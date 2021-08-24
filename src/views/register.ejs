@@ -27,9 +27,17 @@
 
             <div class="input">
                 <div class="input-addon">
-                    <i class="material-icons">Nombre de Usuario</i>
+                    <i class="material-icons">Nombre</i>
                 </div>
-                <input name="username" id="username" placeholder="Username" type="text" required class="validate" autocomplete="off">
+                <input name="name" id="name" placeholder="Name" type="text" required class="validate" autocomplete="off">
+            </div>
+
+            <div class="clearfix"></div>
+            <div class="input">
+                <div class="input-addon">
+                    <i class="material-icons">Apellido</i>
+                </div>
+                <input name="lastName" id="lastName" placeholder="LastName" type="text" required class="validate" autocomplete="off">
             </div>
 
             <div class="clearfix"></div>
@@ -40,7 +48,10 @@
                 </div>
                 <input name="password" id="password" placeholder="Password" type="password" required class="validate" autocomplete="off">
             </div>
-
+            <label>Seleccione avatar</label>
+            <div class="avatar">
+            <input type="file" name="avatar" accept=".jpg" multiple>
+        </div>
             <div class="remember-me">
                 <input type="checkbox">
                 <span style="color: #DDD">I accept Terms of Service</span>
