@@ -19,5 +19,11 @@ module.exports = [
         }
     }
     return true;
+})
+];
+const validateLogin = [
+    body('email').isEmail().withMessage('Debes completar el campo con tu E-Mail'),
+    body('password').notEmpty().withMessage('Debes ingresar una contraseña')
+];
 
-    ]
+    
