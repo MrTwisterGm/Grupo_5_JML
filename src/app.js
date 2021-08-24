@@ -6,11 +6,17 @@ const userRoutes = require("./routes/user");
 const session = require("express-session"); //SESSION (middleware a nivel de aplicacion(global))
 const cookieParser = require("cookie-parser"); //COOKIES
 const methodOverride = require("method-override"); // PARA USAR PUT Y DELETE
+const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
 
 
 app.use(session({secret:"shhh, es un secreto", resave: true,
 saveUninitialized: true})); // para utilizar session
 app.use(express.urlencoded({extended: false}));
+
+
+app.use(userLoggedMiddleware);
+
+
 app.use(express.json()); // esto es para interpretar la info que viaja en los formularios vía POST -
 // cuando no encuentra el req.body == undefined es por el orden de estos middlewares
 app.use(cookieParser());

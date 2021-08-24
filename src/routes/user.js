@@ -5,17 +5,25 @@ const uploadFile = require("../middlewares/multerMiddleware");
 const multer =require ("multer");
 const path = require ("path");
 
+const validations = require("../middlewares/validateRegisterMiddleware");
+const guestMiddleware = require("../middlewares/guestMiddleware");
+const authMiddleware = require("../middlewares/authMiddleware");
 
 
-router.get("/login",user.login);
 
-router.post("/login",user.loginProcess);
-
-router.get("/register",user.register);
+router.get("/register", guestMiddleware, user.register);
 
 router.post("/register",uploadFile.single("avatar"),user.processRegister);
 
-// routes.get("/profile", usersController.profile);
+router.get("/login", guestMiddleware, user.login);
+
+router.post("/login",user.loginProcess);
+
+// Perfil de Usuario
+// routes.get("/profile/", authMiddleware, user.profile);
+
+// logout
+// routes.get("/logout/", user.logout);
 
 
 

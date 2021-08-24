@@ -4,6 +4,7 @@ const brand = require("../models/brand");
 const user = require("../models/user");
 const bcryptjs = require("bcryptjs"); // hashea la password
 const { validationResult } = require("express-validator");
+const mainController = require("./main");
 
 module.exports = {
   login: (req, res) => {
@@ -19,6 +20,7 @@ module.exports = {
       );
 
       if (isOkThePassword) {
+        delete userToLogin.password;
         req.session.userLogged = userToLogin;
         return res.send("Ok puede ingresar");
       } 
@@ -87,4 +89,30 @@ module.exports = {
     let userCreated = user.create(userToCreate);
     return res.redirect("/user/login");
   },
+  
+  //  return res.render("userLoginForm", {
+  //   errores: {
+  //     email: {
+  //       msg: "No se encuentra este email en nuestra base de datos"
+  //     }
+  //   }
+  // }),
+
+
+  //  profile: (req, res) => {
+  //   
+  //   return res.render("userProfile", {
+    // user: req.session.userLogged
+  // });
+  // },
+  
+  
+  
+  logout: (req, res) => {
+    req.session.destroy();
+    return res.redirect("/");
+  }
+
 };
+
+// module.exports = controller;
