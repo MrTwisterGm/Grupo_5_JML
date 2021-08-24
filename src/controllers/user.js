@@ -79,9 +79,10 @@ module.exports = {
 
     let userToCreate = {
       email: req.body.email,
-      username: req.body.username,
+      name: req.body.name,
+      lastName: req.body.lastName,
       password: bcryptjs.hashSync(toString(req.body.password), 10),
-      // avatar: req.file.filename,
+      avatar: req.file.filename
     };
     let userCreated = user.create(userToCreate);
     return res.redirect("/user/login");

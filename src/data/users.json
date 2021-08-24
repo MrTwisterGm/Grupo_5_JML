@@ -6,5 +6,27 @@
   "email": "juan@hotmail.com",
   "username": "juan",
   "password": "$2a$10$AGPP1IF8WOZdjrGfxypFNu6Es1Vvlq9X87P6K/FJkGCridQ8dIaTW"
+ },
+ {
+  "email": "matias@gmail.com",
+  "password": "$2a$10$pmHXeKZF5lBROPnV3VjR/OMu54K4nRKKTvaAYTKnHXAxt.ygCRUIK"
+ },
+ {
+  "email": "ezequiel@gmail.com",
+  "name": "ezequiel",
+  "password": "$2a$10$Gso782pdnaQF6szDIkyTju0GIo2BrLmFGBdPZwiXrGclAUO7gsZyi"
+ },
+ {
+  "email": "diluc@gmail.com",
+  "name": "diluc",
+  "lastName": "favonius",
+  "password": "$2a$10$ZDELMcyNNjB0s.6lFjYyZewOKnQ9SSZw1B3m6tdNSDg7yjSbtPDnu"
+ },
+ {
+  "email": "matyyas@gmail.com",
+  "name": "matyyas",
+  "lastName": "bernarddi",
+  "password": "$2a$10$mX6t3ia.32ihiXuVCflpm.xPwzWavsYWL2tCvnO/Cfy7NI4qjnf56",
+  "avatar": "1629768824713_img.jpg"
  }
 ]
