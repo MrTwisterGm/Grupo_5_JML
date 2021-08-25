@@ -13,17 +13,17 @@ const authMiddleware = require("../middlewares/authMiddleware");
 
 router.get("/register", guestMiddleware, user.register);
 
-router.post("/register",uploadFile.single("avatar"),user.processRegister);
+router.post("/register",uploadFile.single("avatar"),validations ,user.processRegister);
 
 router.get("/login", guestMiddleware, user.login);
 
 router.post("/login",user.loginProcess);
 
 // Perfil de Usuario
-// routes.get("/profile/", authMiddleware, user.profile);
+router.get("/profile", authMiddleware, user.profile);
 
 // logout
-// routes.get("/logout/", user.logout);
+router.get("/logout", user.logout);
 
 
 
