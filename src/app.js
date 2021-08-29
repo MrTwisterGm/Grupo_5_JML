@@ -8,7 +8,7 @@ const cookieParser = require("cookie-parser"); //COOKIES
 const methodOverride = require("method-override"); // PARA USAR PUT Y DELETE
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
 
-app.use(userLoggedMiddleware);
+// app.use(userLoggedMiddleware);
 
 app.use(session({secret:"shhh, es un secreto", resave: true,
 saveUninitialized: true})); // para utilizar session

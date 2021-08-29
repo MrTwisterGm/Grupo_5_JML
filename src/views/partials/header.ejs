@@ -1,31 +1,35 @@
 <header>
-  <div class="contenedor3">
-    <div class="caja-logo">
-      <img class="logo" src="/img/logo.png" alt="logo" />
+  <nav class="barra-home">
+    <img class="logo" src="/img/logo.png" alt="logo" />
+    <div class="links" id="links">
+          <a href="">Productos</a>
+          <a href="">Descargas</a>
+          <a href="">Marcas</a>
+          <a href="">Contacto</a>
+          <a href="">Ayuda</a>
+      </div>
+    <div class="search">
+      <input type="search" />
+      <button class="btn-search" type="submit">
+        <i class="fas fa-search"></i>
+      </button>
     </div>
-    
-      <nav class="barra-home">
-        <ul class="barra">
-          <li><a href="">Productos</a></li>
-          <li><a href="">Descargas</a></li>
-          <li><a href="">Marcas</a></li>
-          <li><a href="">Contacto</a></li>
-          <li><a href="">Ayuda</a></li>
-        </ul>
 
-        <ul class="login-nav">
-          <li>
-            <i class="fas fa-user"></i>
-          </li>
-          <li>
-            <i class="fas fa-shopping-cart"></i>
-          </li>
-          <input class="search" type="search" />
-          <button class="btn-search" type="submit">
-            <i class="fas fa-search"></i>
-          </button>
-        </ul>
-      </nav>
-    
-  </div>
+    <div class="icons-nav">
+      <ul class="login-nav">
+        <li>
+          <i title="Iniciar Sesión" class="fas fa-user-circle"></i>
+        </li>
+        <li>
+          <i title="Carrito de compras" class="fas fa-shopping-cart"></i>
+        </li>
+        <li>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i title="Menú" class="fas fa-bars"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 </header>
+<script src="/js/header.js"></script>

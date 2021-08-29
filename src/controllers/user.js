@@ -4,7 +4,8 @@ const brand = require("../models/brand");
 const user = require("../models/user");
 const bcryptjs = require("bcryptjs"); // hashea la password
 const { validationResult } = require("express-validator");
-
+const cookieParser = require("cookie-parser");
+const cookie = cookieParser
 
 module.exports = {
   login: (req, res) => {
@@ -26,7 +27,7 @@ module.exports = {
         req.session.userLogged = userToLogin;
           
       if(req.body.remember_user) {
-        res.cookie("userEmail", req.body.email, { maxAge: ( 1000 * 60) *60})
+        res.cookie("email", req.body.email, { maxAge: ( 1000 * 60) *60})
       }
           
       return res.redirect("/user/profile"); 
