@@ -8,7 +8,7 @@
 
     <div class="agregarProducto">
         <form id="agregar2" class="agregarform" method="POST" action="" enctype="multipart/form-data">
-            <h1 class="h1">Agregar producto</h1>
+            <h1 class="agregar-titulo">Agregar producto</h1>
             <div class="agregarProducto">
                 <div class="errores">
                     <ul id="errores">
@@ -16,12 +16,12 @@
                 </div>
                 <label class="label" for="nombre">Nombre:</label>
                 <br>
-                <input id="nombre" placeholder="Nombre del producto"  type="text" name="nombre"> 
+                <input class="agregar_input" id="nombre" placeholder="Nombre del producto"  type="text" name="nombre"> 
             </div>
-            <div class="agregarProductodesc">
+            <div class="agregarProducto">
                 <label class="label" for="descripcion">Descripción:</label>
                 <br>
-                <input id="descripcion" placeholder="Descripcion del producto" type="text" name="descripcion">
+                <textarea name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Descripcion del producto"></textarea>
             </div>
             <div class="agregarProducto">
                 <label class="label"for="imagen">Imágen:</label>
@@ -32,6 +32,9 @@
                 <label class="label" for="color">Selecciona un color:</label>
                 <br>
                 <select name="color" type="Seleccionar un Color">
+                    <option value="negro">Negro</option>
+                    <option value="azul">Azul</option>
+                    <option value="rojo">Rojo</option>
     
                 </select>
             </div>
@@ -40,16 +43,17 @@
                 <label class="label" for="category">Selecciona una categoria:</label>
                 <br>
                 <select name="category" type="Seleccionar una Categoria">
-                    
+                    <option value="auriculares">Auriculaes</option>
+                    <option value="inalabricos">Inalámbricos</option>
                 </select>
             </div>
             <div class="agregarProducto">
                 <label class="label" for="precio">Precio:</label>
                 <br>
-                <input id="precio" placeholder="Precio del producto" type="number" name="precio">
+                <input class="agregar_input" id="precio" placeholder="Precio del producto" type="number" name="precio">
             </div>
             <div class="IS">
-                <button type="submit">Guardar</button>
+                <button class="agregar_button" type="submit">Guardar</button>
                 
             </div>
        

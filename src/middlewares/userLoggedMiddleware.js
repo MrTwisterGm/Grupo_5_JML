@@ -2,6 +2,7 @@
 
 // function userLoggedMiddleware(req, res, next) {
 //    res.locals.isLogged = false;
+
 //    let emailInCookie = req.cookies.email;
 //    let userFromCookie = user.findByField("email", emailInCookie);
 
