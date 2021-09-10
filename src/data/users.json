@@ -28,5 +28,12 @@
   "lastName": "bernarddi",
   "password": "$2a$10$mX6t3ia.32ihiXuVCflpm.xPwzWavsYWL2tCvnO/Cfy7NI4qjnf56",
   "avatar": "1629768824713_img.jpg"
+ },
+ {
+  "email": "matiias@gmail.com",
+  "name": "matias",
+  "lastName": "bernardi",
+  "password": "$2a$10$Xox6A8fRojK4MWITikDKX.n5BoALkzsLqhlCM7yMsU.PNeDcQoXXK",
+  "avatar": "1631301698104_img.jpg"
  }
 ]
