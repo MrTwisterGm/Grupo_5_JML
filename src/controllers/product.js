@@ -5,8 +5,8 @@ module.exports = {
     index:(req,res) => {
         res.render("home",{list:product.allWithExtra()})},
 
-    home:(req,res) => {
-        res.render("home")
+    allproducts:(req,res) => {
+        res.render("listadoDeProductos")
     },    
 
     show: (req,res) => res.render("productDetail",{product:product.one(req.params.id)}),
