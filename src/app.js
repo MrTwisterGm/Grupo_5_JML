@@ -7,6 +7,7 @@ const session = require("express-session"); //SESSION (middleware a nivel de apl
 const cookieParser = require("cookie-parser"); //COOKIES
 const methodOverride = require("method-override"); // PARA USAR PUT Y DELETE
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
+const mainrouter = require("./routes/main");
 
 // app.use(userLoggedMiddleware);
 
@@ -29,7 +30,7 @@ app.set("views",path.join(__dirname,"views"));
 
 app.set("view engine","ejs");
 
-app.use("/", productRoutes);
+app.use("/", mainrouter);
 
 app.use("/products", productRoutes);
 

@@ -2,8 +2,6 @@ const product = require('../models/product');
 const color = require('../models/color');
 const brand = require('../models/brand');
 module.exports = {
-    index:(req,res) => {
-        res.render("home",{list:product.allWithExtra()})},
 
     allproducts:(req,res) => {
         res.render("listadoDeProductos")
