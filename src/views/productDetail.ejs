@@ -7,25 +7,26 @@
 
     <%- include("./partials/header.ejs") %>
 
-    <main>
-    <h1>Detalle de Producto</h1>
+    <main class="detalle_producto">
+    <h1 class="agregar-titulo">Detalle de Producto</h1>
     <div class="descripcion">
     <div>
-        <img src="/img/astro.jpg" alt="">
+        <img class="detail_img" src="/img/astro.jpg" alt="">
     </div>
-    <div>
-  <h2>Descripción</h2>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, officia.</p>
-  <p>$5000</p>
-  <p>20% OFF</p>
-  <p>12 Cuotas sin interes</p>
-  <p>Cantidad</p>
-  <button type="submit">Comprar</button>
-  <button type="button"> <i class="fas fa-shopping-cart"></i> </button>
+    <div class="content-detail">
+  <h2 class="agregar-titulo">Descripción</h2>
+  <div>
+  <p class="detail_margin">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, officia.</p>
+  <p class="detail_margin">$5000</p>
+  <p class="detail_margin">20% OFF</p>
+  <p class="detail_margin">12 Cuotas sin interes</p>
+  <p class="detail_margin">Cantidad</p>
+</div>
+  <button class="agregar_button" type="submit">Comprar <i class="fas fa-shopping-cart"></i> </button>
 </div>
 </div>
     </main>
-    
+
     <%- include("./partials/footer.ejs") %>
 
   </body>
