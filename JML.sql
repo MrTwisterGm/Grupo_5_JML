@@ -25,8 +25,8 @@ CREATE TABLE `products`(
   `Id` INT PRIMARY KEY AUTO_INCREMENT,
   `name` VARCHAR(100) NOT NULL,
   `price` INT NOT NULL,
-  `categorie_id` INT NOT NULL,
   `brand_id` INT NOT NULL,
+  `categorie_id` INT NOT NULL,
   `images` VARCHAR(300),
   FOREIGN KEY (categorie_id) REFERENCES categories(Id),
   
