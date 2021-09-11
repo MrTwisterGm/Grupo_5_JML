@@ -26,7 +26,6 @@ module.exports = {
     },
     cart: (req,res) => {
         res.render("productCart")
-    },
-    //HAY QUE CREAR EL CONTROLADOR DE USUARIOS DESPUES
+    }
     
 }
