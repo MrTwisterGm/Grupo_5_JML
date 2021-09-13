@@ -1,12 +1,10 @@
 # Weekly
 
 # Que se hizo:
-+ Creamos las rutas y arreglamos las que no funcionaban
-+ Arreglamos los controladores
++ Creamos la database y le implementamos sequelize.
 
 # Impedimentos:
-+ Tuvimos un problema para separar las rutas main y las de productos y tuvimos que poner todo en productos (salvo la de usuarios que si funciono)
++ Tuvimos un problema para vincular algunas tablas y que no todos los integrantes estuvimos.
 
 # Que se va a hacer:
-+ Crear lo que falta de usuarios
-+ Pulir el login y agregar la vista de usuario.
++ Arreglar las vistas y metodos, y intentar terminar lo del sprint.
