@@ -20,7 +20,7 @@ const upload = multer({storage:dest});
 
 
 
-router.get("/allproducts", product.allproducts)
+router.get("/", product.allproducts)
 
 router.get("/detail",product.show)
 
