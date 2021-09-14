@@ -6,17 +6,17 @@
 
     <%- include("./partials/header.ejs") %>
 
-    <div id="container-login">
-        <div id="title">
-            <i class="material-icons lock">Formulario de Login</i> 
-        </div>
+    <div class="container-login">
+
+        <h1 class="titulo-login">Iniciar Sesión</h1> 
+
 
         <form method="POST" action="">
             <div class="input">
                 <div class="input-addon">
                     <i class="material-icons">Correo electrónico</i>
                 </div>
-                <input id="Correo electrónico" name="email" placeholder="Correo electrónico" type="text" required class="validate" autocomplete="off">
+                <input class="correo-input" id="Correo electrónico" name="email" placeholder="Correo electrónico" type="text" required class="validate" autocomplete="off">
             </div>
 
             <% if (locals.errors && errors.email) { %> 
@@ -31,28 +31,26 @@
                 <div class="input-addon">
                     <i class="material-icons">Contraseña</i>
                 </div>
-                <input id="contraseña" name="password" placeholder="contraseña" type="password" required class="validate" autocomplete="off">
+                <input class="correo-input" id="contraseña" name="password" placeholder="contraseña" type="password" required class="validate" autocomplete="off">
             </div>
 
             <div class="remember-me">
                 <input type="checkbox" name="remember_user">
                 <p>Recordarme</p>
-                    
+
             </div>
 
-            <input type="submit" value="Entrar" />
+            <button class="btn-cuadrado" type="submit">Ingresar</button>
         </form>
 
         <div class="forgot-password">
-            <a href="#">Forgot your password?</a>
-        </div>
-        <div class="privacy">
-            <a href="#">Privacy Policy</a>
+            <a href="#">Olvidaste tu contraseña?</a>
         </div>
 
+
         <div class="register">
-            Don't have an account yet?
-            <a href="#"><button id="register-link">Register here</button></a>
+            <h4>Todavía no tienes una cuenta?</h4>
+            <a href="/user/register"><button class="btn-cuadrado" id="register-link">Registrate</button></a>
         </div>
     </div>
 

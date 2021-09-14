@@ -6,7 +6,7 @@
 
 <%- include("./partials/header.ejs") %>
 
-    <div class="agregarProducto">
+    <div class="container-login">
         <form id="agregar2" class="agregarform" method="POST" action="" enctype="multipart/form-data">
             <h1 class="agregar-titulo">Agregar producto</h1>
             <div class="agregarProducto">
@@ -16,17 +16,17 @@
                 </div>
                 <label class="label" for="nombre">Nombre:</label>
                 <br>
-                <input class="agregar_input" id="nombre" placeholder="Nombre del producto"  type="text" name="nombre"> 
+                <input class="correo-input" id="nombre" placeholder="Nombre del producto"  type="text" name="nombre"> 
             </div>
             <div class="agregarProducto">
                 <label class="label" for="descripcion">Descripción:</label>
                 <br>
-                <textarea name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Descripcion del producto"></textarea>
+                <textarea class="correo-input textarea" name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Descripcion del producto"></textarea>
             </div>
             <div class="agregarProducto">
                 <label class="label"for="imagen">Imágen:</label>
                 <br>
-                <input id="imagen" placeholder="Imagen del producto" type="file" name="imagen" multiple>
+                <input class="correo-input" id="imagen" placeholder="Imagen del producto" type="file" name="imagen" multiple>
             </div>
             <div class="agregarProducto">
                 <label class="label" for="color">Selecciona un color:</label>
@@ -50,10 +50,10 @@
             <div class="agregarProducto">
                 <label class="label" for="precio">Precio:</label>
                 <br>
-                <input class="agregar_input" id="precio" placeholder="Precio del producto" type="number" name="precio">
+                <input class="correo-input" id="precio" placeholder="Precio del producto" type="number" name="precio">
             </div>
             <div class="IS">
-                <button class="agregar_button" type="submit">Guardar</button>
+                <button class="btn-cuadrado" type="submit">Guardar</button>
                 
             </div>
        
