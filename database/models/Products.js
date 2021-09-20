@@ -20,9 +20,13 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER
         },
 
-        imagenes: {
+        images: {
             type: dataTypes.STRING(300)
         },
+        
+        description: {
+            type: dataTypes.STRING(300)
+        }
     };
     let config = {
         tableName: "products",
