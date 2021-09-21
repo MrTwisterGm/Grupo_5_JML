@@ -6,6 +6,7 @@ const bcryptjs = require("bcryptjs"); // hashea la password
 const { validationResult } = require("express-validator");
 const cookieParser = require("cookie-parser");
 const cookie = cookieParser
+const db = require ("../../database/models")
 
 module.exports = {
   login: (req, res) => {

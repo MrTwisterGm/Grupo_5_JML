@@ -16,7 +16,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER
         },
         
-        categorie_id: {
+        category_id: {
             type: dataTypes.INTEGER
         },
 
@@ -26,15 +26,37 @@ module.exports = (sequelize, dataTypes) => {
         
         description: {
             type: dataTypes.STRING(300)
+        },
+        
+        delete_at:{
+            type: dataTypes.DATE
         }
     };
+
     let config = {
         tableName: "products",
-        timestamps: false
+        timestamps: true,
+        underscored: true,
+        paranoid: true
     }
     
         const Products = sequelize.define(alias, cols, config);
     
+        Products.associate = (models) => {
+            Products.belongsTo(models.Categories,
+                {
+                    as: "categories",
+                    foreignKey: "category_id"
+                }),
+            
+            Products.belongsTo(models.Brands,
+                {
+                    as: "brand",
+                    foreignKey: "brand_id"
+                }
+                )
+        }
+
         return Products;
     }
 

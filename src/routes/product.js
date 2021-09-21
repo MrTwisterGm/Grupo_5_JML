@@ -27,6 +27,8 @@ router.get("/detail",product.detail)
 router.get("/create",product.create)
 router.post("/create",upload.any(), product.save)
 
+router.get("/search",product.search)
+
 //router.get("/:id",product.show) NO TIENE VISTA
 
 //router.get("/edit/:id",product.edit) NO TIENE VISTA
@@ -37,6 +39,5 @@ router.post("/create",upload.any(), product.save)
 
 //router.delete("/delete/:id",product.delete) NO TIENE VISTA
 
-// router.get("/cart", product.cart);
 
 module.exports = router
