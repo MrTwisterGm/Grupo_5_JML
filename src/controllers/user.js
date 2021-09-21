@@ -103,7 +103,14 @@ module.exports = {
         let userCreated = user.create(userToCreate);
         return res.redirect("/user/login");
       
-  }
+  },
     
+  edit: (req,res) => {
+    db.Users.findByPk(req.params.id)
+    .then(response => {
+        res.render('productEdit')
+    })
+        
+}
     
 } 

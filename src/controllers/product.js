@@ -35,6 +35,30 @@ module.exports = {
             res.render('productDetail')
         })
             
+    },
+
+    edit: (req,res) => {
+        db.Products.findByPk(req.params.id)
+        .then(response => {
+            res.render('productEdit')
+        })
+            
+    },
+
+    update: (req,res) => {
+        db.Products.findByPk(req.params.id)
+        .then(response => {
+            res.render('productDetail')
+        })
+            
+    },
+
+    delete: (req,res) => {
+        db.Products.findByPk(req.params.id)
+        .then(response => {
+            res.render('home')
+        })
+            
     }
     
     // edit: (req,res) => res.render("product/edit",{product:product.one(req.params.id),colors: color.all(),brands:brand.all()}),
