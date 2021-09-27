@@ -12,12 +12,12 @@ let cols = {
     last_name: {
         type: dataTypes.STRING(100)
     },
-    e_mail: {
+    email: {
         type: dataTypes.STRING(100)
     },
     
     password: {
-        type: dataTypes.STRING(50)
+        type: dataTypes.STRING(100)
     },
 
 };

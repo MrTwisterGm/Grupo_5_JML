@@ -16,12 +16,12 @@
                 </div>
                 <label class="label" for="nombre">Nombre:</label>
                 <br>
-                <input class="correo-input" id="nombre" placeholder="Nombre del producto"  type="text" name="name"> 
+                <input class="correo-input" id="nombre" placeholder="Nombre del producto"  type="text" name="name" value="<%= product.name  %>"> 
             </div>
             <div class="agregarProducto">
                 <label class="label" for="descripcion">Descripción:</label>
                 <br>
-                <textarea class="correo-input textarea" name="description" id="descripcion" cols="30" rows="10" placeholder="Descripcion del producto"></textarea>
+                <textarea class="correo-input textarea" name="description" id="descripcion" cols="30" rows="10" placeholder="Descripcion del producto" value="<%= product.description  %> "></textarea>
             </div>
             <div class="agregarProducto">
                 <label class="label"for="imagen">Imágen:</label>
@@ -32,13 +32,20 @@
                 <label class="label" for="brand">Selecciona una marca:</label>
                 <br>
                 <select name="brand_id" type="Seleccionar una marca">
-                    <% if (typeof brand != "undefined") { %> 
-                        <% for(let i=0; i< brand.length; i++) {%> 
-                            <option value=<%=brand[i].id %>><%=brand[i].name %></option>
-                            
+                    
+                    
+                    <% if (typeof brand !="undefined" ) { %>
+                        <% for(let i=0; i< brand.length; i++) {%>
+                            <% if(product.brand_id==brand[i].id){ %>
+                                <option selected value=<%=brand[i].id %>><%= brand[i].brand %>
+                                </option>
+                                <% } else { %>
+                                    <option value=<%=brand[i].id %>><%= brand[i].brand %>
+                                    </option>
+                                <%} %>
                             <% } %>
-                            <% } %>
-    
+                        <% } %>
+
                 </select>
             </div>
             
@@ -46,18 +53,20 @@
                 <label class="label" for="categories">Selecciona una categoria:</label>
                 <br>
                 <select name="categories_id" type="Seleccionar una Categoria">
-                    <% if (typeof category != "undefined") { %> 
-                        <% for(let i=0; i< category.length; i++) {%> 
-                            <option value=<%=category[i].id %>><%=category[i].name %></option>
+
+                    <% if (typeof categories != "undefined") { %> 
+                        <% for(let i=0; i< categories.length; i++) {%> 
+                            <option value=<%=categories[i].id %>><%=categories[i].categories %></option>
                             
                             <% } %>
                             <% } %>
+
                 </select>
             </div>
             <div class="agregarProducto">
                 <label class="label" for="price">Precio:</label>
                 <br>
-                <input class="correo-input" id="precio" placeholder="Precio del producto" type="number" name="price">
+                <input class="correo-input" id="precio" placeholder="Precio del producto" type="number" name="price" value=<%=product.price %>>
             </div>
             <div class="IS">
                 <button class="btn-cuadrado" type="submit">Guardar</button>
@@ -66,7 +75,6 @@
        
         </form>
     </div>
-    <script src="/public/js/productValidator.js"></script>
 
     <%- include("./partials/footer.ejs") %>
     
