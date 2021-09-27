@@ -11,12 +11,12 @@
         <h1 class="titulo-login">Iniciar Sesión</h1> 
 
 
-        <form method="POST" action="">
+        <form method="POST" action="" id="log">
             <div class="input">
                 <div class="input-addon">
                     <i class="material-icons">Correo electrónico</i>
                 </div>
-                <input class="correo-input" id="Correo electrónico" name="email" placeholder="Correo electrónico" type="text" required class="validate" autocomplete="off">
+                <input class="correo-input" id="email" name="email" placeholder="Correo electrónico" type="text" required class="validate" autocomplete="off">
             </div>
 
             <% if (locals.errors && errors.email) { %> 
@@ -53,6 +53,7 @@
             <a href="/user/register"><button class="btn-cuadrado" id="register-link">Registrate</button></a>
         </div>
     </div>
+    <script src="/public/js/login.js"></script>
 
     <%- include("./partials/footer.ejs") %>
 
