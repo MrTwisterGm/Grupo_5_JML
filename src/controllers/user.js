@@ -1,117 +1,103 @@
-const product = require("../models/product");
-const color = require("../models/color");
-const brand = require("../models/brand");
-const user = require("../models/user");
 const bcryptjs = require("bcryptjs"); // hashea la password
 const { validationResult } = require("express-validator");
 const cookieParser = require("cookie-parser");
-const cookie = cookieParser
-const db = require ("../../database/models")
+const cookie = cookieParser;
+const db = require("../../database/models/index");
 
 module.exports = {
   login: (req, res) => {
     res.render("login");
   },
-  
-  loginProcess: (req, res) => {
-    
-    let userToLogin = user.findField("email", req.body.email);
-    
-  if (userToLogin) {
-      let isOkThePassword = bcryptjs.compareSync(
-        toString(req.body.password),
-        userToLogin.password
-      );
-        
-    if (isOkThePassword) {
-      delete userToLogin.password;
-        req.session.userLogged = userToLogin;
-          
-      if(req.body.remember_user) {
-        res.cookie("email", req.body.email, { maxAge: ( 1000 * 60) *60})
-      }
-          
-      return res.redirect("/user/profile"); 
-    } else {
-               
-         res.render("login", {
-          errors: {
-            email: {
-              msg: "Las credenciales son inválidas"
-            }
-          }
-        });
-        } 
-      } else {
-         res.render("login", {
-          errors: {
-            email: {
-              msg: "No se encuentra el email"
-            }
-          }
-        });
-      }
-        
 
-  },
-      
-  profile: (req, res) => {
-        return res.render("Profile", {
-          user: req.session.userLogged
-        });
-  },
-      
-  logout: (req, res) => {
-        res.clearCookie("userEmail");
-        req.session.destroy();
+  loginProcess: (req, res) => {
+    db.Users.findOne({
+      where: {
+        email: req.body.email,
+      },
+    }).then(function (user) {
+      if (
+        user &&
+        bcryptjs.compareSync(toString(req.body.password), user.password)
+      ) {
+        req.session.user = {
+          email: req.body.email,
+          name: req.body.name,
+          lastName: req.body.lastName,
+          password: bcryptjs.hashSync(toString(req.body.password), 10),
+          avatar: req.file.filename,
+        };
+        if (req.body.remember_user != undefined) {
+          res.cookie("remember_user", req.session.user.id, {
+            maxAge: 15 * 24 * 60 * 60 * 1000,
+          });
+        }
         return res.redirect("/");
+      }
+    });
   },
-            
-            
+
+  profile: (req, res) => {
+    db.Users.findByPk(req.params.id)
+      .then(function (user) {
+        return res.render("profile", { user });
+      })
+      .catch((error) => console.log(error));
+  },
+
+  logout: (req, res) => {
+    req.session.user = undefined;
+    res.cookie("remember_user", undefined, { maxAge: 0 });
+    res.redirect("/");
+  },
+
   register: (req, res) => {
     res.render("register");
   },
 
   processRegister: (req, res) => {
     const resultValidation = validationResult(req);
-              
-      if (resultValidation.length > 0) {
-        return res.render("register", {
-         errors: resultValidation.mapped(),
-           oldData: req.body,
-        });
-      }
-      let userInDb = user.findField("email", req.body.email);
-      if (userInDb) {
-        return res.render("register", {
-          errors: {
-            email: {
-              msg: "Este email ya esta registrado",
-            },
-          },
-              oldData: req.body,
-        });
-      }
-                    
-        let userToCreate = {
+
+    if (resultValidation.isEmpty()) {
+      db.Users.create({
+        email: req.body.email,
+        name: req.body.name,
+        lastName: req.body.lastName,
+        password: bcryptjs.hashSync(toString(req.body.password), 10),
+        avatar: req.file.filename
+      }).then(function (users) {
+        res.redirect("/");
+      });
+    } else {
+      return res.render("/");
+    }
+  },
+
+  edit: function (req, res) {
+    db.Users.findByPk(req.params.id)
+      .then(function (user) {
+        return res.render("updateUser", { user });
+      })
+      .catch((error) => console.log(error));
+  },
+
+  update: function (req, res) {
+    db.Users.findByPk(req.params.id).then(function (user) {
+      db.Users.update(
+        {
           email: req.body.email,
           name: req.body.name,
           lastName: req.body.lastName,
           password: bcryptjs.hashSync(toString(req.body.password), 10),
           avatar: req.file.filename
-      }
-      
-        let userCreated = user.create(userToCreate);
-        return res.redirect("/user/login");
-      
+        },
+        {
+          where: {
+            id: req.params.id,
+          },
+        }
+      ).then(function (user) {
+        return res.redirect("profile" + req.session.user.id);
+      });
+    });
   },
-    
-  edit: (req,res) => {
-    db.Users.findByPk(req.params.id)
-    .then(response => {
-        res.render('productEdit')
-    })
-        
-}
-    
-} 
+};

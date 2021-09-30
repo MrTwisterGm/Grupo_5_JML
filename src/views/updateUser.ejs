@@ -1,0 +1,94 @@
+<html>
+  <%- include("./partials/head.ejs")%>
+
+  <body>
+    <%- include("./partials/header.ejs") %>
+
+    <div class="container-login" id="container-register">
+      <h1 class="titulo-login">Registrate</h1>
+
+      <form method="POST" enctype="multipart/form-data" action="" id="register">
+        <div class="input">
+            <label>Email</label>
+          <input
+            class="correo-input"
+            name="email"
+            id="email"
+            placeholder="Email"
+            type="email"
+            required
+            class="validate"
+            value="<%= user.email  %> "
+          />
+        </div>
+
+        <div class="input">
+          
+            <label>Nombre</label>
+         
+          <input
+            class="correo-input"
+            name="name"
+            id="name"
+            placeholder="Name"
+            type="text"
+            required
+            class="validate"
+            value="<%= user.name  %> "
+          />
+        </div>
+
+        <div class="input">
+          
+            <label>Apellido</label>
+         
+          <input
+            class="correo-input"
+            name="lastName"
+            id="lastName"
+            placeholder="LastName"
+            type="text"
+            required
+            class="validate"
+            value="<%= user.last_name  %> "
+          />
+        </div>
+
+
+        <div class="input">
+         
+            <label>Contraseña</label>
+         
+          <input
+            class="correo-input"
+            name="password"
+            id="password"
+            placeholder="Password"
+            type="password"
+            required
+            class="validate"
+            value="<%= user.password  %> "
+          />
+        </div>
+
+        
+        <div class="avatar">
+            <label>Seleccione avatar</label>
+          <input
+            class="correo-input"
+            type="file"
+            name="avatar"
+            multiple
+            value="<%= user.avatar  %> "
+          />
+        </div>
+
+        <button class="btn-cuadrado" type="submit">Aceptar</button>
+      </form>
+
+     
+    <script src="/public/js/validator.js"></script>
+
+    <%- include("./partials/footer.ejs") %>
+  </body>
+</html>

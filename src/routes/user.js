@@ -2,8 +2,6 @@ const express = require('express');
 const router = express.Router();
 const user = require('../controllers/user');
 const uploadFile = require("../middlewares/multerMiddleware");
-const multer =require ("multer");
-const path = require ("path");
 
 const validations = require("../middlewares/validateRegisterMiddleware");
 const guestMiddleware = require("../middlewares/guestMiddleware");
@@ -25,6 +23,8 @@ router.get("/profile", authMiddleware, user.profile);
 // logout
 router.get("/logout", user.logout);
 
+router.get("/update", user.edit);
 
+router.post("/update", user.update);
 
 module.exports = router
