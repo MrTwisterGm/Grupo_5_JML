@@ -100,4 +100,28 @@ module.exports = {
       });
     });
   },
+  
+  list: (req, res) => {
+  db.Users
+      .findALL()
+      .then(users => {
+        return res.json({
+          total: users.length,
+          data: movies,
+          status: 200
+        })
+      })
+  },
+
+  show: (req, res) => {
+    db.Users
+      .findByPk(req.params.id)
+      .then(users => {
+        return res.json({
+          data: movie,
+          status: 200
+        })
+      })
+  },
 };
+

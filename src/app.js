@@ -8,6 +8,9 @@ const cookieParser = require("cookie-parser"); //COOKIES
 const methodOverride = require("method-override"); // PARA USAR PUT Y DELETE
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
 const mainrouter = require("./routes/main");
+const apiProducts = require("./routes/apis/products")
+const apiUsers = require("./routes/apis/users")
+
 
 // app.use(userLoggedMiddleware);
 
@@ -35,5 +38,9 @@ app.use("/", mainrouter);
 app.use("/products", productRoutes);
 
 app.use("/user", userRoutes);
+
+app.use("/apiProducts", apiProducts);
+
+app.use("/apiUsers", apiUsers);
 
 app.listen(3000,() => console.log("Server on http://localhost:3000"));

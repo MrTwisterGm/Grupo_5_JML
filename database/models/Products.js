@@ -7,25 +7,31 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true,
         },
         name: {
-               type: dataTypes.STRING(100)
+               type: dataTypes.STRING(100),
+               NotNull: true
         },
         price: {
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER,
+            NotNull: true
         },
         brand_id: {
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER,
+            NotNull: true
         },
         
         category_id: {
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER,
+            NotNull: true
         },
 
         images: {
-            type: dataTypes.STRING(300)
+            type: dataTypes.STRING(300),
+            NotNull: true
         },
         
         description: {
-            type: dataTypes.STRING(300)
+            type: dataTypes.STRING(300),
+            NotNull: true
         },
         
         delete_at:{
