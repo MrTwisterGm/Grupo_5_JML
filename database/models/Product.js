@@ -1,10 +1,11 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Products"
+    let alias = "Product"
     let cols = {
         id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
+            NotNull: true
         },
         name: {
                type: dataTypes.STRING(100),
@@ -12,6 +13,15 @@ module.exports = (sequelize, dataTypes) => {
         },
         price: {
             type: dataTypes.INTEGER,
+            NotNull: true
+        },
+        images: {
+            type: dataTypes.STRING(300),
+            NotNull: true
+        },
+        
+        description: {
+            type: dataTypes.STRING(300),
             NotNull: true
         },
         brand_id: {
@@ -24,38 +34,29 @@ module.exports = (sequelize, dataTypes) => {
             NotNull: true
         },
 
-        images: {
-            type: dataTypes.STRING(300),
-            NotNull: true
-        },
         
-        description: {
-            type: dataTypes.STRING(300),
-            NotNull: true
-        },
-        
-        delete_at:{
+        deleted_at:{
             type: dataTypes.DATE
         }
     };
 
     let config = {
-        tableName: "products",
+        tableName: "product",
         timestamps: true,
         underscored: true,
         paranoid: true
     }
     
-        const Products = sequelize.define(alias, cols, config);
+        const Product = sequelize.define(alias, cols, config);
     
-        Products.associate = (models) => {
-            Products.belongsTo(models.Categories,
+        Product.associate = (models) => {
+            Product.belongsTo(models.Category,
                 {
-                    as: "categories",
+                    as: "category",
                     foreignKey: "category_id"
                 }),
             
-            Products.belongsTo(models.Brands,
+            Product.belongsTo(models.Brand,
                 {
                     as: "brand",
                     foreignKey: "brand_id"
@@ -63,7 +64,7 @@ module.exports = (sequelize, dataTypes) => {
                 )
         }
 
-        return Products;
+        return Product;
     }
 
  

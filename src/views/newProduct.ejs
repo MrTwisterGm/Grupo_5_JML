@@ -34,7 +34,7 @@
                 <select name="brand_id" type="Seleccionar una marca">
                     <% if (typeof brand != "undefined") { %> 
                         <% for(let i=0; i< brand.length; i++) {%> 
-                            <option value=<%=brand[i].id %>><%=brand[i].name %></option>
+                            <option value=<%=brand[i].id %>><%=brand[i].brand %></option>
                             
                             <% } %>
                             <% } %>
@@ -45,10 +45,10 @@
             <div class="agregarProducto">
                 <label class="label" for="categories">Selecciona una categoria:</label>
                 <br>
-                <select name="categories_id" type="Seleccionar una Categoria">
+                <select name="category_id" type="Seleccionar una Categoria">
                     <% if (typeof category != "undefined") { %> 
                         <% for(let i=0; i< category.length; i++) {%> 
-                            <option value=<%=category[i].id %>><%=category[i].name %></option>
+                            <option value=<%=category[i].id %>><%=category[i].category %></option>
                             
                             <% } %>
                             <% } %>

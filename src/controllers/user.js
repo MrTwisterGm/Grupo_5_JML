@@ -102,8 +102,7 @@ module.exports = {
   },
   
   list: (req, res) => {
-  db.Users
-      .findALL()
+  db.Users.findAll()
       .then(users => {
         return res.json({
           total: users.length,
@@ -114,8 +113,7 @@ module.exports = {
   },
 
   show: (req, res) => {
-    db.Users
-      .findByPk(req.params.id)
+    db.Users.findByPk(req.params.id)
       .then(users => {
         return res.json({
           data: movie,

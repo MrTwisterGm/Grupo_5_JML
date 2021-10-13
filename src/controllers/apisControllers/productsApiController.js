@@ -3,7 +3,7 @@ const db = require("../../../database/models/index")
 module.exports = {
 
     list: function (req, res) {
-        db.Products.findAll(
+        db.Product.findAll(
         ).then(function (products) {
             for (let i = 0; i < products.length; i++) {
                 products[i].setDataValue("endpoint", "/apisProducts/detail/" + products[i].id)
@@ -23,7 +23,7 @@ module.exports = {
         })
     },
     total: function (req, res) {
-        db.Products.count().then(function(numero){
+        db.Product.count().then(function(numero){
             res.json(numero)
         }).catch(function () {
             res.json({ status: 500 })
@@ -31,9 +31,9 @@ module.exports = {
     },
 
     show: function (req, res) {
-        db.Categories.findAll().then(function (categories) {
-        db.Brands.findAll().then(function (brands) {
-                db.Products.findByPk(req.params.id, {
+        db.Category.findAll().then(function (categories) {
+        db.Brand.findAll().then(function (brands) {
+                db.Product.findByPk(req.params.id, {
                     include: ["images"]
                 })
                     .then(function (product) {
@@ -61,7 +61,7 @@ module.exports = {
     },
 
     categories: function(req,res){
-        db.Categories.findAll()
+        db.Category.findAll()
 
             .then(function (categories) {
                 if (categories.length > 0) {
@@ -83,7 +83,7 @@ module.exports = {
             })
     },
     totalCategories: function(req,res){
-        db.Categories.findAll({ include: "products"})
+        db.Category.findAll({ include: "products"})
 
             .then(function (totalCategories) {
                 console.log(totalCategories)

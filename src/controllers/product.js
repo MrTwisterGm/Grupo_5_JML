@@ -3,7 +3,7 @@ const db = require("../../database/models/index");
 
 module.exports = {
   allproducts: (req, res) => {
-    db.Products.findAll({
+    db.Product.findAll({
       where: { deleted_at: null },
     }).then((resultados) => {
       res.render("listadoDeProductos", { products });
@@ -11,20 +11,20 @@ module.exports = {
   },
 
   create: function (req, res) {
-    db.Categories.findAll().then(function (category) {
-      db.Brands.findAll().then(function (brand) {
+    db.Category.findAll().then(function (category) {
+      db.Brand.findAll().then(function (brand) {
         return res.render("newProduct", { brand, category });
       });
     });
   },
 
   save: (req, res) => {
-    db.Products.create({
+    db.Product.create({
       name: req.body.name,
       description: req.body.description,
       image: req.file.filename,
       brand_id: req.body.brand_id,
-      categories_id: req.body.categories_id,
+      category_id: req.body.category_id,
       price: req.body.price,
     })
       .then((resultados) => {
@@ -36,10 +36,10 @@ module.exports = {
   },
 
   detail: (req, res) => {
-    db.Products.findAll().then(function (product) {
-      db.Categories.findAll().then(function (category) {
-        db.Brands.findAll().then(function (brand) {
-          db.Products.findByPk(req.params.id).then((response) => {
+    db.Product.findAll().then(function (product) {
+      db.Category.findAll().then(function (category) {
+        db.Brand.findAll().then(function (brand) {
+          db.Product.findByPk(req.params.id).then((response) => {
             res.render("productDetail", { brand, category, product });
           });
         });
@@ -48,10 +48,10 @@ module.exports = {
   },
 
   edit: (req, res) => {
-    db.Products.findAll().then(function (product) {
-      db.Categories.findAll().then(function (category) {
-        db.Brands.findAll().then(function (brand) {
-          db.Products.findByPk(req.params.id).then((response) => {
+    db.Product.findAll().then(function (product) {
+      db.Category.findAll().then(function (category) {
+        db.Brand.findAll().then(function (brand) {
+          db.Product.findByPk(req.params.id).then((response) => {
             res.render("productEdit", { brand, category, product });
           });
         });
