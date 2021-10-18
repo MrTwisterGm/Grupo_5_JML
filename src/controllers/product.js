@@ -1,11 +1,11 @@
-const db = require("../../database/models/index");
+const db = require("../../database/models");
 
 
 module.exports = {
   allproducts: (req, res) => {
     db.Product.findAll({
       where: { deleted_at: null },
-    }).then((resultados) => {
+    }).then((products) => {
       res.render("listadoDeProductos", { products });
     });
   },
@@ -22,13 +22,14 @@ module.exports = {
     db.Product.create({
       name: req.body.name,
       description: req.body.description,
-      image: req.file.filename,
-      brand_id: req.body.brand_id,
-      category_id: req.body.category_id,
+      image: req.files.filename,
+      brand_id: req.body.brand,
+      category_id: req.body.category,
       price: req.body.price,
     })
       .then((resultados) => {
         res.redirect("/products");
+        console.log(resultados)
       })
       .catch(function (e) {
         console.log(e);

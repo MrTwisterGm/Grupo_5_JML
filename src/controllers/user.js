@@ -68,7 +68,7 @@ module.exports = {
         res.redirect("/");
       });
     } else {
-      return res.render("/");
+      return res.render("home");
     }
   },
 

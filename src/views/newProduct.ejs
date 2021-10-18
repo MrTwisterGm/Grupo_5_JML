@@ -7,7 +7,7 @@
 <%- include("./partials/header.ejs") %>
 
     <div class="container-login">
-        <form id="agregar2" class="agregarform" method="POST" action="" enctype="multipart/form-data">
+        <form id="agregar2" class="agregarform" method="POST" action="/products/create" enctype="multipart/form-data">
             <h1 class="agregar-titulo">Agregar producto</h1>
             <div class="agregarProducto">
                 <div class="errores">
@@ -31,7 +31,7 @@
             <div class="agregarProducto">
                 <label class="label" for="brand">Selecciona una marca:</label>
                 <br>
-                <select name="brand_id" type="Seleccionar una marca">
+                <select name="brand" type="Seleccionar una marca">
                     <% if (typeof brand != "undefined") { %> 
                         <% for(let i=0; i< brand.length; i++) {%> 
                             <option value=<%=brand[i].id %>><%=brand[i].brand %></option>
@@ -43,15 +43,14 @@
             </div>
             
             <div class="agregarProducto">
-                <label class="label" for="categories">Selecciona una categoria:</label>
+                <label class="label" for="category">Selecciona una categoria:</label>
                 <br>
-                <select name="category_id" type="Seleccionar una Categoria">
+                <select name="category" type="Seleccionar una Categoria">
                     <% if (typeof category != "undefined") { %> 
                         <% for(let i=0; i< category.length; i++) {%> 
                             <option value=<%=category[i].id %>><%=category[i].category %></option>
-                            
-                            <% } %>
-                            <% } %>
+                        <% } %>
+                    <% } %>
                 </select>
             </div>
             <div class="agregarProducto">
@@ -60,10 +59,8 @@
                 <input class="correo-input" id="precio" placeholder="Precio del producto" type="number" name="price">
             </div>
             <div class="IS">
-                <button class="btn-cuadrado" type="submit">Guardar</button>
-                
+                <button class="btn-cuadrado" type="submit">Guardar</button>   
             </div>
-       
         </form>
     </div>
     <script src="/public/js/productValidator.js"></script>

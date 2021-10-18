@@ -30,21 +30,6 @@ let config = {
 
     const Users = sequelize.define(alias, cols, config);
 
-    // Users.associate = (models) => {
-    //     Users.belongsTo(models.Categories,
-    //         {
-    //             as: "categories",
-    //             foreignKey: "category_id"
-    //         }),
-        
-    //     Users.belongsTo(models.Brands,
-    //         {
-    //             as: "brand",
-    //             foreignKey: "brand_id"
-    //         }
-    //         )
-    // }
-
     return Users;
 }
 

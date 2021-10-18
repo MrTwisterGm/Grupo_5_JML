@@ -4,7 +4,8 @@ module.exports = {
     "password": null,
     "database": "jml",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "operatorAliases": false
   },
   "test": {
     "username": "root",

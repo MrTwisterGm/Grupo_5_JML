@@ -4,7 +4,7 @@ const router = express.Router();
 const product = require('../controllers/product');
 const multer = require('multer');
 const path = require('path');
-const { home } = require('../controllers/main');
+
 let dest = multer.diskStorage({
     destination: function (req, file, cb) {
         let extension = path.extname(file.originalname);
@@ -29,15 +29,11 @@ router.post("/create",upload.any(), product.save)
 
 router.get("/search",product.search)
 
-//router.get("/:id",product.show) NO TIENE VISTA
 
-//router.get("/edit/:id",product.edit) NO TIENE VISTA
+router.get("/edit/:id",product.edit)
+router.put("/update/:id",upload.any(),product.update)
 
-//router.post("/save",[upload.single("image")],product.save) NO TIENE VISTA
-
-//router.put("/update/:id",[upload.single("image")],product.update) NO TIENE VISTA
-
-//router.delete("/delete/:id",product.delete) NO TIENE VISTA
+router.delete("/delete/:id",product.delete) 
 
 
 module.exports = router
