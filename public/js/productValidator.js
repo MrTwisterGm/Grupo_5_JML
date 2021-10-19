@@ -1,6 +1,9 @@
 const form = document.querySelector('#agregar2');
 
+console.log("js")
+
 form.addEventListener('submit', function(event){
+    console.log("evento")
     
     
     const productField = this.querySelector('#nombre');

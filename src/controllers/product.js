@@ -19,10 +19,11 @@ module.exports = {
   },
 
   save: (req, res) => {
+    console.log(req.body)
     db.Product.create({
       name: req.body.name,
       description: req.body.description,
-      image: req.files.filename,
+      image: req.file.filename,
       brand_id: req.body.brand,
       category_id: req.body.category,
       price: req.body.price,
@@ -33,6 +34,7 @@ module.exports = {
       })
       .catch(function (e) {
         console.log(e);
+        res.send(e);
       });
   },
 

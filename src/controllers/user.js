@@ -1,8 +1,6 @@
 const bcryptjs = require("bcryptjs"); // hashea la password
 const { validationResult } = require("express-validator");
-const cookieParser = require("cookie-parser");
-const cookie = cookieParser;
-const db = require("../../database/models/index");
+const db = require("../../database/models");
 
 module.exports = {
   login: (req, res) => {
@@ -66,6 +64,7 @@ module.exports = {
         avatar: req.file.filename
       }).then(function (users) {
         res.redirect("/");
+        console.log(users)
       });
     } else {
       return res.render("home");
