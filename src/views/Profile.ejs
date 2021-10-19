@@ -12,10 +12,11 @@
  <div class="row">
      <div class="col-md-3">
          <h2>Hi <%= user.name %> </h2>
-         <img src="../.././public/img/avatar/<% user.avatar %> ">
+         <h2> <%= user.last_name %> </h2>
+         <img src="/img/avatar/avatar.jpg">
          <br>
          <br>
-         <div class="alert alert-success"> <% user.email %> </div>
+         <div class="alert alert-success"> <%= user.email %> </div>
      </div>
  </div>
 
@@ -27,3 +28,6 @@
 
 </body>
 </html>
+
+
+

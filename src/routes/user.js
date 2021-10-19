@@ -11,7 +11,7 @@ const authMiddleware = require("../middlewares/authMiddleware");
 
 router.get("/register", guestMiddleware, user.register);
 
-router.post("/register",uploadFile.single("avatar"),validations ,user.processRegister);
+router.post("/register",uploadFile.single("avatar"),user.processRegister);
 
 router.get("/login", guestMiddleware, user.login);
 
@@ -26,5 +26,7 @@ router.get("/logout", user.logout);
 router.get("/update", user.edit);
 
 router.post("/update", user.update);
+
+router.get("/contact", user.contact);
 
 module.exports = router

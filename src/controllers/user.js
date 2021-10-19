@@ -1,43 +1,42 @@
 const bcryptjs = require("bcryptjs"); // hashea la password
 const { validationResult } = require("express-validator");
 const db = require("../../database/models");
+const { Op } = require("sequelize")
+
+
 
 module.exports = {
   login: (req, res) => {
     res.render("login");
   },
 
-  loginProcess: (req, res) => {
-    db.Users.findOne({
-      where: {
-        email: req.body.email,
-      },
-    }).then(function (user) {
-      if (
-        user &&
-        bcryptjs.compareSync(toString(req.body.password), user.password)
-      ) {
-        req.session.user = {
-          email: req.body.email,
-          name: req.body.name,
-          lastName: req.body.lastName,
-          password: bcryptjs.hashSync(toString(req.body.password), 10),
-          avatar: req.file.filename,
-        };
-        if (req.body.remember_user != undefined) {
-          res.cookie("remember_user", req.session.user.id, {
-            maxAge: 15 * 24 * 60 * 60 * 1000,
-          });
+  loginProcess: async (req, res) => {
+    let userToLogin = await db.Users.findOne({
+        where: {
+            email: { [Op.like]: req.body.email }
         }
-        return res.redirect("/");
-      }
-    });
-  },
+    })
+    if (userToLogin) {
+        let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+        if (isOkThePassword) {
+            // delete userToLogin.password;
+            req.session.userLogged = userToLogin;
+
+            // res.send(userToLogin)
+            if (req.body.remember_user) {
+                res.cookie('email', req.body.email, { maxAge: 5 * 60 * 1000 }); //probamos otra opcion 'email'
+            }
+
+            return res.render('/');
+        } 
+    }
+
+},
 
   profile: (req, res) => {
     db.Users.findByPk(req.params.id)
       .then(function (user) {
-        return res.render("profile", { user });
+        return res.render("profile", { user: req.session.userLogged });
       })
       .catch((error) => console.log(error));
   },
@@ -59,13 +58,13 @@ module.exports = {
       db.Users.create({
         email: req.body.email,
         name: req.body.name,
-        lastName: req.body.lastName,
+        last_name: req.body.last_name,
         password: bcryptjs.hashSync(toString(req.body.password), 10),
         avatar: req.file.filename
       }).then(function (users) {
-        res.redirect("/");
-        console.log(users)
-      });
+        req.session.userLogged = users
+        res.redirect("/user/login");
+      }).catch((error) => console.log(error));
     } else {
       return res.render("home");
     }
@@ -120,5 +119,10 @@ module.exports = {
         })
       })
   },
+
+  contact: function (req, res) {
+    res.render("contacto")
+}
+
 };
 

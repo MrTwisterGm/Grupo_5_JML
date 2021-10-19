@@ -21,7 +21,7 @@ app.use(cookieParser());
 app.use(methodOverride("_method")); // para put y delete en la action del form le ponemos action="RUTA?_method=put o delete"
 
 
-// app.use(userLoggedMiddleware);
+app.use(userLoggedMiddleware);
 
 app.use(session({secret:"shhh, es un secreto", resave: true,
 saveUninitialized: true})); // para utilizar session
