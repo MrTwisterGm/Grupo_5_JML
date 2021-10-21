@@ -1,33 +1,51 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
     <%- include("./partials/head.ejs")%>
 
 <body>
+
     <%- include("./partials/header.ejs") %>
 
+    <section class="seccion-perfil-usuario">
+        <div class="perfil-usuario-header">
+            <div class="perfil-usuario-portada">
+                <div class="perfil-usuario-avatar">
+                    <img  src="/img/avatar/avatar.jpg" alt="img-avatar">
+                    <button type="button" class="boton-avatar">
+                        <i class="far fa-image"></i>
+                    </button>
+                </div>
+                <button type="button" class="boton-portada">
+                    <i class="far fa-image"></i> Cambiar fondo
+                </button>
+            </div>
+        </div>
+        <div class="perfil-usuario-body">
+            <div class="perfil-usuario-bio">
+                <div class="nombre-perfil">
+                <h1><%= user.name %> </h1>
+                <h1> <%= user.last_name %> </h1>
+            </div>
+                <p class="email-perfil"> <%= user.email %></p>
+            </div>
+            <div class="perfil-usuario-footer">
+                <ul class="lista-datos">
+                    <li><i class="icono fas fa-calendar-alt"></i> Fecha nacimiento.</li>
+                    <li><i class="icono fas fa-briefcase"></i> Compras.</li>
+                </ul>
+                <ul class="lista-datos">
 
-    
-<!-- Container --> 
-<div class="container" style="margin-top: 40px;">
- <div class="row">
-     <div class="col-md-3">
-         <h2>Hi <%= user.name %> </h2>
-         <h2> <%= user.last_name %> </h2>
-         <img src="/img/avatar/avatar.jpg">
-         <br>
-         <br>
-         <div class="alert alert-success"> <%= user.email %> </div>
-     </div>
- </div>
 
+                    <li><i class="icono fas fa-user-check"></i> Fecha de registro.</li>
+                    <li><i class="icono fas fa-map-marker-alt"></i> Ubicacion.</li>
+                </ul>
+            </div>
+            
+        </div>
+    </section>
 
-</div>
-
-
-<%- include("./partials/footer.ejs") %>
+    <%- include("./partials/footer.ejs") %>
 
 </body>
 </html>
-
-
-
