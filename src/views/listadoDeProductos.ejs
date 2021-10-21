@@ -13,7 +13,8 @@
         <% for (let i = 0; i < products.length; i++) { %> 
             <li>
                 <%=products[i].name%>
-                <%=products[i].images%>
+                <img src="/uploads/products/<%=products[i].images%>" alt="">
+                <%=products[i].description%>
                 <%=products[i].price%>
 
             </li>

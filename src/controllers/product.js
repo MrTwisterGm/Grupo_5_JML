@@ -23,7 +23,7 @@ module.exports = {
     db.Product.create({
       name: req.body.name,
       description: req.body.description,
-      image: req.file.filename,
+      images: req.file.filename,
       brand_id: req.body.brand,
       category_id: req.body.category,
       price: req.body.price,
