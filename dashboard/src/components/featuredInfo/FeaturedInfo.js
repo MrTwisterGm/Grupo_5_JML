@@ -1,7 +1,54 @@
+import React, { Component,useEffect } from 'react';
 import "./featuredInfo.css"
 import ClearAllIcon from '@mui/icons-material/ClearAll';
 
-export default function FeaturedInfo() {
+
+class FeaturedInfo extends Component {
+
+    
+    constructor(props) {
+        super(props);   
+        this.state = {
+            total: 0,
+            category: 0
+        }
+    }
+    
+    apiCall(url, consecuencia) {
+        fetch(url)
+            .then(response => response.json())
+            .then(data => consecuencia(data))
+            .catch(e => console.log(e))
+    }
+
+    
+    
+
+    componentDidMount() {
+        this.apiCall("http://localhost:3001/apiProducts/total", this.totalProductos);
+        this.apiCall("http://localhost:3001/apiProducts/categories", this.totalCategorias)
+        
+
+    }
+
+    totalProductos = (data) => {
+        
+        this.setState({
+            total: data.meta.total 
+           
+        })
+    }
+    totalCategorias = (data) => {
+        this.setState({
+            category: data.meta.category,
+        })
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+
+    }
+
+    render() {
     return (
         <div className="featured">
             <div className="featuredItem">
@@ -15,7 +62,7 @@ export default function FeaturedInfo() {
             <div className="featuredItem">
                 <span className="featuredTitle">Cantidad Total <ClearAllIcon className="featuredIcon"/></span>
                 <div className="featuredMoneyContainer">
-                    <span className="featuredMoney">25</span>
+                <span className="featuredMoney">{this.state.total}</span>
                     
                 </div>
                 
@@ -46,4 +93,5 @@ export default function FeaturedInfo() {
             </div>
         </div>
     )
-}
+}}
+export default FeaturedInfo;

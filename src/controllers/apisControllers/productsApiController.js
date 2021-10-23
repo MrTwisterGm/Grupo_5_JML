@@ -30,34 +30,20 @@ module.exports = {
         })
     },
 
-    show: function (req, res) {
-        db.Category.findAll().then(function (categories) {
-        db.Brand.findAll().then(function (brands) {
-                db.Product.findByPk(req.params.id, {
-                    include: ["images"]
-                })
-                    .then(function (product) {
-                        if (product != undefined) {
-                        let respuesta = {
-                            meta: {
-                                status: 200,
-                                brands: brands.length,
-                                categories: categories.length,
-                                url: "/apisProducts/detail/" + product.id
-                            },
-                            data: product
-                        }
-                        return res.json(respuesta)
-                    } else {
-                        return res.json({ status: 204 ,msg: "este producto no se encuentra" })
-                    }
-                })
-
-        })
+   
+    
+    show: function(req, res){
+        db.Product.findByPk(req.params.id,{include: ["images"]})
+        
+            .then(function (detalle) {
+                
+            
+        res.json(detalle);
+             
         }).catch(function () {
             res.json({ status: 500 })
         })
-
+        
     },
 
     categories: function(req,res){
@@ -82,37 +68,39 @@ module.exports = {
                 res.json({ status: 500 })
             })
     },
-    totalCategories: function(req,res){
-        db.Category.findAll({ include: "products"})
+     totalCategories: function(req,res){
+         db.Category.findAll({ include: "products"})
 
-            .then(function (totalCategories) {
+             .then(function (totalCategories) {
                 console.log(totalCategories)
                 if (totalCategories.length > 0) {
-                    let arrayOfCategories = []
-                    for(let i = 0; i < totalCategories.length; i++){
+                     let arrayOfCategories = []
+                     for(let i = 0; i < totalCategories.length; i++){
                         
-                        arrayOfCategories.push({
-                            nombre:totalCategories[i].dataValues.categories,
-                            total:totalCategories[i].dataValues.products.length
-                        })
+                         arrayOfCategories.push({
+                             nombre:totalCategories[i].dataValues.categories,
+                             total:totalCategories[i].dataValues.products.length
+                         })
                     }
                     let apiResponse = {
-                        meta: {
-                            status: 200,
-                            url: "/apisProducts/categories",
+                         meta: {
+                             status: 200,
+                             url: "/apisProducts/categories",
                             total: totalCategories.length
-                        },
-                        data:arrayOfCategories
+                         },
+                         data:arrayOfCategories
                         
-                    }
+                 }
                     return res.json(apiResponse)
                 } else {
                     return res.json({ status: 204 })
-                }
+                 }
             })
-            .catch(function () {
-                res.json({ status: 500 })
-            })
-        }
+             .catch(function () {
+                 res.json({ status: 500 })
+             })
+         },
+
+    
 
 }
