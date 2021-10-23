@@ -6,7 +6,8 @@
 
 body {
   font-family: "Roboto Mono", monospace;
-  background: linear-gradient(to bottom, #c100ff36, black 80%, #000000);
+  /* background: linear-gradient(to bottom, #c100ff36, black 80%, #000000);#00ffe7 */
+  background: linear-gradient(to bottom, #c100ff36,black 95% );
 }
 
 /* HEADER  */
@@ -621,6 +622,113 @@ body {
 .margin-top {
   margin-top: 34px;
 }
+
+/* Listado de productos  */
+
+.titulo-listado-productos {
+   font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.container-products {
+  width: 90%;
+  display: flex;
+  margin-bottom: 100px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-left: 5%;
+}
+
+.prod-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+  border: 5px solid black;
+  background: linear-gradient(to bottom, #c100ff36, black 80%);
+  border-radius: 10%;
+  padding: 10px;
+}
+
+
+.prod-precio {
+  flex-grow: 3;
+  font-size: 25px;
+}
+
+.prod-descripcion {
+  display: none;
+
+}
+
+.contenedor-nombre{
+  width: 320px;
+  height: 100px;
+  align-items: center;
+}
+
+.prod-contenedor h3 {
+  margin: 25px;
+  color: black;
+  font-size: 22px;
+  height: 50px;
+  text-align: center;
+}
+
+
+
+.btn-animado {
+  display: inline-block;
+  
+  border-radius: 9px;
+  box-shadow: 0 0 12px 1px rgba(0, 0, 0, .15);
+  background-color: black;
+  border: 2px solid #317FFF;
+  color: #317FFF;
+  cursor: pointer;
+  transition: all ease-in 150ms;
+  overflow: hidden;
+  font-family: "Arial", Segoe UI, Tahoma, sans-serifl, Helvetica Neue, Helvetica;
+  
+  padding: 10px 40px;
+  margin-top: 40px;
+  margin: 20px;
+}
+
+.btn-animado i {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1rem;
+  font-size: 1.7rem;
+  opacity: 1;
+}
+.btn-animado:hover {
+  background-color: #317FFF;
+  color: #fff;
+}
+.btn-animado:active {
+  background-color: #317FFF;
+}
+
+.btn-precio {
+  display: flex;
+
+}
+
+@media (min-width: 340px) {
+
+.img-producto {
+  height: 250px;
+  width: 250px;
+  border-radius: 10px;
+}
+}
+
+
+/* fukcia #BC3CFF,  azul #317FFF         blanco #fff     verde #22848A   celeste #00ffe7*/
+
+
 
 /* 
  PRODUCT DETAIL */

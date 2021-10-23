@@ -1,27 +1,49 @@
-
 <html>
-
 
 <%- include("./partials/head.ejs")%>
 
 <body>
 
     <%- include("./partials/header.ejs") %>
-
+    <div class="titulo-listado-productos">
     <h1>Listado de Productos</h1>
-    <ul>
-        <% for (let i = 0; i < products.length; i++) { %> 
-            <li>
-                <%=products[i].name%>
-                <img src="/uploads/products/<%=products[i].images%>" alt="">
-                <%=products[i].description%>
-                <%=products[i].price%>
+    </div> 
 
-            </li>
+    <section class="container-products">
+        
+        
+        <% for (let i = 0; i < products.length; i++) { %> 
+
+            
+            <article class="prod-contenedor">
+                <article class="contenedor-nombre">
+                <h3> <%=products[i].name%> </h3>
+                </article>
+                <img src="/uploads/products/<%=products[i].images%>" alt="" class="img-producto">
+                
+
+                
+                <h4 class="prod-descripcion">
+                    <%=products[i].description%>
+                </h4>
+                
+                <button type="button" class="btn-animado animacion-uno">
+                    <div class="btn-precio">
+                    <i class="fas fa-dollar-sign"></i>
+                    <p class="prod-precio">
+                        $<%=products[i].price%>
+                    </p>
+                    </div>
+                </button>
+            
+            </article>
+        
+           
             <% } %>
-    </ul>
+</section>
 
     <%- include("./partials/footer.ejs") %>
 
 </body>
-</html>
+</html> 
+
