@@ -340,9 +340,10 @@ body {
 }
 
 .seccion-perfil-usuario .perfil-usuario-avatar img {
-    width: 100%;
+        width: 100%;
     position: relative;
     border-radius: 50%;
+    height: 100%;
 }
 
 .seccion-perfil-usuario .perfil-usuario-avatar .boton-avatar {
@@ -453,8 +454,8 @@ body {
 .brandsbox img {
   height: auto;
   width: auto;
-  max-height: 240px;
-  max-width: 240px;
+  max-height: 220px;
+  max-width: 220px;
 }
 
 /* LOGIN */
@@ -655,6 +656,7 @@ body {
 
 .margin-top {
   margin-top: 34px;
+  border-bottom: 1px solid black;
 }
 
 /* Listado de productos  */
@@ -774,7 +776,7 @@ body {
 }
 
 .detail_margin {
-  margin-bottom: 11px;
+  margin-bottom: 40px;
 }
 
 .detail_name{
