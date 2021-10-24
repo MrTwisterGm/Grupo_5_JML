@@ -626,7 +626,9 @@ body {
 /* Listado de productos  */
 
 .titulo-listado-productos {
-   font-size: 30px;
+  background-color:grey;
+  color: white;
+  font-size: 30px;
     text-align: center;
     margin-bottom: 30px;
 }
