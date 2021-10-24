@@ -20,6 +20,7 @@ body {
   width: 100%;
   height: 100px;
   position: relative;
+  border-bottom: 1px solid #00fff6;
 }
 
 .logo {
@@ -49,11 +50,16 @@ body {
 
 .links {
   display: none;
+  font-family: 'Chakra Petch', sans-serif;
 }
 
 .links a {
   text-decoration: none;
   color: #9af8f3;
+}
+
+.links a i {
+  position: absolute;
 }
 
 .links a:hover {
@@ -65,6 +71,11 @@ body {
   text-decoration: none;
   font-size: 16px;
   margin-right: 10px;
+}
+
+.btn-precio a {
+  text-decoration: none;
+  color: #9af8f3;
 }
 
 /* SLIDESHOW HOME BANNER */
@@ -422,6 +433,29 @@ body {
 
 }
 
+.pago {
+  height: 114px;
+}
+
+.brandimg {
+  height: 150px;
+  margin: 100px;
+}
+
+.brandsbox {
+  display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+   
+}
+
+.brandsbox img {
+  height: auto;
+  width: auto;
+  max-height: 240px;
+  max-width: 240px;
+}
 
 /* LOGIN */
 
@@ -431,11 +465,11 @@ body {
   align-items: center;
   font-family: "Roboto Mono";
   padding: 25px 25px 25px;
-  background: #fffffff0;
+  background: #fff;
   font-size: 15px;
   max-width: 375px;
   margin: 0 auto;
-  height: 700px;
+  height: auto;
 }
 
 .correo-input {
@@ -626,11 +660,11 @@ body {
 /* Listado de productos  */
 
 .titulo-listado-productos {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 30px;
   background-color:grey;
   color: white;
-  font-size: 30px;
-    text-align: center;
-    margin-bottom: 30px;
 }
 
 .container-products {
@@ -647,9 +681,9 @@ body {
   flex-direction: column;
   align-items: center;
   margin: 30px;
-  border: 5px solid black;
+  border: 1px solid black;
   background: linear-gradient(to bottom, #c100ff36, black 80%);
-  border-radius: 10%;
+  border-radius: 2%;
   padding: 10px;
 }
 
@@ -671,10 +705,9 @@ body {
 }
 
 .prod-contenedor h3 {
-  margin: 25px;
-  color: black;
-  font-size: 22px;
-  height: 50px;
+  margin: 18px;
+    color: black;
+    font-size: 17px;
   text-align: center;
 }
 
@@ -686,31 +719,25 @@ body {
   border-radius: 9px;
   box-shadow: 0 0 12px 1px rgba(0, 0, 0, .15);
   background-color: black;
-  border: 2px solid #317FFF;
-  color: #317FFF;
+  border: 2px solid #31fffa;
+  color: #31fbff;
   cursor: pointer;
   transition: all ease-in 150ms;
   overflow: hidden;
-  font-family: "Arial", Segoe UI, Tahoma, sans-serifl, Helvetica Neue, Helvetica;
-  
   padding: 10px 40px;
   margin-top: 40px;
   margin: 20px;
 }
 
 .btn-animado i {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 1rem;
-  font-size: 1.7rem;
-  opacity: 1;
+  display: none;
 }
 .btn-animado:hover {
-  background-color: #317FFF;
+  background-color: #31e7ff;
   color: #fff;
 }
 .btn-animado:active {
-  background-color: #317FFF;
+  background-color: #31c5ff;
 }
 
 .btn-precio {
@@ -722,13 +749,9 @@ body {
 
 .img-producto {
   height: 250px;
-  width: 250px;
-  border-radius: 10px;
+  border-radius: 6px;
 }
 }
-
-
-/* fukcia #BC3CFF,  azul #317FFF         blanco #fff     verde #22848A   celeste #00ffe7*/
 
 
 
@@ -754,10 +777,44 @@ body {
   margin-bottom: 11px;
 }
 
+.detail_name{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 30px;
+}
+
 .descripcion {
   display: flex;
   flex-direction: column;
 }
+
+.allcategories {
+  display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    background-image: url(../img/mujer.jpg);
+    height: 170px;
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+ }
+ .allcategories li i {
+  color: #979797;
+   font-size: 50px;
+ }
+
+ .allcategories li h4 {
+  color: #979797;
+   font-size: 15px;
+ }
+ .listacategories:hover i , .listacategories:hover h4 {
+   color: #fff;
+   cursor: pointer;
+ }
 
 @media screen and (min-width: 768px) {
   .ver-prod {
@@ -767,9 +824,6 @@ body {
   .login-nav {
     font-size: 20px;
     margin-right: 12px;
-  }
-  .links a {
-    font-size: 12px;
   }
   
   .content-detail {
@@ -807,6 +861,27 @@ body {
     padding: 0px;
     margin-right: 25px;
   }
+  .search input {
+    display: none;
+  }
+  .links {
+    display: inline-flex;
+    font-family: 'Chakra Petch', sans-serif;
+    width: 55%;
+    justify-content: space-between;
+  }
+  .links a {
+    font-size: 20px;
+  }
+  .ver-productos , .fa-bars , .btn-search {
+    display: none;
+  }
+  .icons-nav ul li i {
+    color: white;
+    margin: 5px;
+    font-size: 27px;
+ }
+ 
 
   
 }
@@ -832,4 +907,10 @@ body {
   }
 
   
+}
+
+@media all and (max-width: 425px){
+  .links a {
+    font-size: 12px;
+  }
 }

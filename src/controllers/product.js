@@ -37,16 +37,14 @@ module.exports = {
         res.send(e);
       });
   },
+  brands: (req, res) => {
+    res.render("brands");
+  },
 
   detail: (req, res) => {
-    db.Product.findAll().then(function (product) {
-      db.Category.findAll().then(function (category) {
-        db.Brand.findAll().then(function (brand) {
-          db.Product.findByPk(req.params.id).then((response) => {
-            res.render("productDetail", { brand, category, product });
-          });
-        });
-      });
+     db.Product.findByPk(req.params.id).then((product) => {
+      res.render("productDetail", { product });
+
     });
   },
 

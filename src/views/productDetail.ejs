@@ -11,16 +11,17 @@
     <h1 class="agregar-titulo">Detalle de Producto</h1>
     <div class="descripcion">
     <div>
-        <img class="detail_img" src="/img/astro.jpg" alt="">
+      <img src="/uploads/products/<%=product.images%>" alt="" class="img-producto">
     </div>
     <div class="content-detail">
+      <p class="detail_name"><%=product.name%></p>
   <h2 class="agregar-titulo margin-top">Descripción</h2>
   <div>
-  <p class="detail_margin">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, officia.</p>
-  <p class="detail_margin">$5000</p>
-  <p class="detail_margin">20% OFF</p>
+  <p class="detail_margin"><%=product.description%></p>
+  <p class="detail_margin"> $ <%=product.price%></p>
+  <!-- <p class="detail_margin">20% OFF</p> -->
   <p class="detail_margin">12 Cuotas sin interes</p>
-  <p class="detail_margin">Cantidad</p>
+  <img class="pago" src="/img/pago.jpg" alt="">
 </div>
   <button class="btn-cuadrado" type="submit">Comprar <i class="fas fa-shopping-cart"></i> </button>
 </div>
