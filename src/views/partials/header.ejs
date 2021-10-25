@@ -4,10 +4,10 @@
     <div class="links" id="links">
       <a href="/user/profile">Mi Perfil</a>
       <a href="/products">Productos</a>
-          <a href="/products/create">Agregar Productos</a>
-          <a href="/products/brands">Marcas</a>
-          <a href="/user/contact">Contacto</a>
-      </div>
+      <a href="/products/create">Agregar Productos</a>
+      <a href="/products/brands">Marcas</a>
+      <a href="/user/contact">Contacto</a>
+    </div>
     <!-- <div class="search">
       <input type="search" name="search" />
       <button class="btn-search" type="submit">
@@ -20,14 +20,31 @@
         <!-- <li>
           <a href=""><i class="fas fa-search"></i></a>
         </li> -->
+        
+
+        <% if(typeof userToLogin == 'undefined')  { %>
         <li>
-          <a href="/user/login"><i title="Iniciar Sesión" class="fas fa-user-circle"></i></a>
+          <a href="/user/login">
+            <i title="Iniciar Sesión" class="fas fa-user-circle"></i>
+          </a>
         </li>
         <li>
           <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i title="Menú" class="fas fa-bars"></i>
           </a>
         </li>
+        <% } else { %>  
+        <li>
+          <a href="/user/logout" title="Cerrar Sesión">
+            <i class="fas fa-sign-out-alt fa-lg"></i>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i title="Menú" class="fas fa-bars"></i>
+          </a>
+        </li>
+        <% } %>
       </ul>
     </div>
   </nav>
