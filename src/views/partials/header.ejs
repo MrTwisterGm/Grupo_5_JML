@@ -22,28 +22,30 @@
         </li> -->
         
 
-        <% if(typeof userToLogin == 'undefined')  { %>
-        <li>
-          <a href="/user/login">
-            <i title="Iniciar Sesión" class="fas fa-user-circle"></i>
-          </a>
-        </li>
-        <li>
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i title="Menú" class="fas fa-bars"></i>
-          </a>
-        </li>
-        <% } else { %>  
-        <li>
-          <a href="/user/logout" title="Cerrar Sesión">
-            <i class="fas fa-sign-out-alt fa-lg"></i>
-          </a>
-        </li>
-        <li>
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i title="Menú" class="fas fa-bars"></i>
-          </a>
-        </li>
+        <% if(locals.userLogged )  { %>
+          <li>
+            <a href="/user/logout" title="Cerrar Sesión">
+              <i class="fas fa-sign-out-alt fa-lg"></i>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i title="Menú" class="fas fa-bars"></i>
+            </a>
+          </li>
+          
+          <% } else  { %>  
+            
+            <li>
+              <a href="/user/login">
+                <i title="Iniciar Sesión" class="fas fa-user-circle"></i>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i title="Menú" class="fas fa-bars"></i>
+              </a>
+            </li>
         <% } %>
       </ul>
     </div>
