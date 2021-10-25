@@ -438,6 +438,12 @@ body {
   height: 114px;
 }
 
+.centrar-pago{
+  display: flex;
+  justify-content: center;
+
+}
+
 .brandimg {
   height: 150px;
   margin: 100px;
@@ -468,7 +474,7 @@ body {
   padding: 25px 25px 25px;
   background: #fff;
   font-size: 15px;
-  max-width: 375px;
+  max-width: 500px;
   margin: 0 auto;
   height: auto;
 }
@@ -789,6 +795,7 @@ body {
 .descripcion {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .allcategories {
@@ -817,6 +824,8 @@ body {
    color: #fff;
    cursor: pointer;
  }
+
+
 
 @media screen and (min-width: 768px) {
   .ver-prod {
