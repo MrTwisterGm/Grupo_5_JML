@@ -11,15 +11,9 @@ export default function UserList() {
       ];
       
       const rows = [
-        { id: 1, lastName: 'Snow', firstName: 'Jon',email: 'snow@gmail.com'},
-        { id: 2, lastName: 'Lannister', firstName: 'Cersei',email: 'lannister@gmail.com'},
-        { id: 3, lastName: 'Lannister', firstName: 'Jaime',email: 'jaime@gmail.com'},
-        { id: 4, lastName: 'Stark', firstName: 'Arya',email: 'rya@gmail@gmail.com'},
-        { id: 5, lastName: 'Targaryen', firstName: 'Daenerys',email: 'targaryen@gmail.com'},
-        { id: 6, lastName: 'Melisandre', firstName: 'Cait', email: 'melisandre@gmail.com'  },
-        { id: 7, lastName: 'Clifford', firstName: 'Ferrara', email: 'clifford@gmail.com'},
-        { id: 8, lastName: 'Frances', firstName: 'Rossini', email: 'frances@gmail.com'},
-        { id: 9, lastName: 'Roxie', firstName: 'Harvey',email: 'harvey@gmail.com'},
+        { id: 1, lastName: 'bernardi', firstName: 'matias',email: 'matyasezeber@gmail.com'},
+        { id: 2, lastName: 'Simpson', firstName: 'Tomas',email: 'matybereze@gmail.com'},
+        
       ];
     return (
         <div style={{flex:4}}>

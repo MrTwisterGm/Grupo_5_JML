@@ -54,7 +54,7 @@ class FeaturedInfo extends Component {
             <div className="featuredItem">
                 <span className="featuredTitle">Total de marcas</span>
                 <div className="featuredMoneyContainer">
-                    <span className="featuredMoney">10</span>
+                    <span className="featuredMoney">7</span>
                     
                 </div>
                 
@@ -62,7 +62,7 @@ class FeaturedInfo extends Component {
             <div className="featuredItem">
                 <span className="featuredTitle">Cantidad Total <ClearAllIcon className="featuredIcon"/></span>
                 <div className="featuredMoneyContainer">
-                <span className="featuredMoney">{this.state.total}</span>
+                <span className="featuredMoney">24</span>
                     
                 </div>
                 
@@ -70,7 +70,7 @@ class FeaturedInfo extends Component {
             <div className="featuredItem">
                 <span className="featuredTitle">Vendidos</span>
                 <div className="featuredMoneyContainer">
-                    <span className="featuredMoney">10</span>
+                    <span className="featuredMoney">12</span>
                     
                 </div>
                 
@@ -78,7 +78,7 @@ class FeaturedInfo extends Component {
             <div className="featuredItem">
                 <span className="featuredTitle">Producto mas caro</span>
                 <div className="featuredMoneyContainer">
-                    <span className="featuredMoney">Hyperx</span>
+                    <span className="featuredMoney">Logitech</span>
                     
                 </div>
                 
@@ -86,7 +86,7 @@ class FeaturedInfo extends Component {
             <div className="featuredItem">
                 <span className="featuredTitle">Ultimo Producto ingresado</span>
                 <div className="featuredMoneyContainer">
-                    <span className="featuredMoney">Hyperx</span>
+                    <span className="featuredMoney">Hyperx Cloud Stinger</span>
                     
                 </div>
                 

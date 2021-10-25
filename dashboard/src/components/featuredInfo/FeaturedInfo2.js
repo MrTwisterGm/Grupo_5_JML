@@ -7,7 +7,7 @@ export default function FeaturedInfo2() {
             <div className="featuredItem">
                 <span className="featuredTitle">Total de marcas</span>
                 <div className="featuredMoneyContainer">
-                    <span className="featuredMoney">4</span>
+                    <span className="featuredMoney">5</span>
                     
                 </div>
                 
@@ -31,7 +31,7 @@ export default function FeaturedInfo2() {
             <div className="featuredItem">
                 <span className="featuredTitle">Producto mas caro</span>
                 <div className="featuredMoneyContainer">
-                    <span className="featuredMoney">Asus</span>
+                    <span className="featuredMoney">Asus Tuf</span>
                     
                 </div>
                 
@@ -39,7 +39,7 @@ export default function FeaturedInfo2() {
             <div className="featuredItem">
                 <span className="featuredTitle">Ultimo Producto ingresado</span>
                 <div className="featuredMoneyContainer">
-                    <span className="featuredMoney">Logitech</span>
+                    <span className="featuredMoney">Logitech G213</span>
                     
                 </div>
                 
